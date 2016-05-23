@@ -1,0 +1,407 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../icofonts/icomoon.eot?gjvk7');
+    src:    url('../icofonts/icomoon.eot?gjvk7#iefix') format('embedded-opentype'),
+        url('../icofonts/icomoon.ttf?gjvk7') format('truetype'),
+        url('../icofonts/icomoon.woff?gjvk7') format('woff'),
+        url('../icofonts/icomoon.svg?gjvk7#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-envelop:before {
+    content: "\e900";
+}
+.icon-facebook:before {
+    content: "\e901";
+}
+.icon-twitter:before {
+    content: "\e902";
+}
+.icon-linkedin2:before {
+    content: "\e903";
+}
+
+.body {
+    font-family: 'Arimo';
+    font-size: 16px;
+    position: relative;
+}
+
+/*.MainMenu {
+  position: fixed;
+}*/
+
+.Major-container {
+  min-height: calc(80vh);
+}
+
+.MainMenu-list {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    /**padding-top: 0.4em;**/
+}
+
+.MainMenu-item {
+    display: inline-block;
+    /**text-align: center;**/
+    text-decoration: none;
+    /**margin: 0 1.5em 0 1.5em;**/
+}
+
+div.MainMenu {
+    background-color: #fafafa; /** #e8f5e9, #f1f8e9 o #f8f8f8 **/
+    border-color: #c8e6c9; /** si #f8f8f8 tons #e8f5e9 **/
+    /** box-shadow: 0 1px 6px rgba(0,0,0,0.35); ponerlo con el affix **/
+}
+
+.MainMenu-listContainer {
+    text-align: center;
+}
+
+.MainMenu-list {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    /**padding-top: 0.4em;**/
+}
+
+.MainMenu-item {
+    display: inline-block;
+    text-align: left;
+    text-decoration: none;
+    /**margin: 0 1.5em 0 1.5em;**/
+}
+
+ul.nav>li>a {
+    color: #757575; /** #43a047 **/
+}
+
+ul.nav>li>a:hover {
+    background: #f8f8f8;
+    color: #AACB40; /** #6ab344 **/
+    font-weight: 900;
+}
+
+.FormSingUp-Container {
+  position: absolute;
+  /*display: inline-block;*/
+  text-align: center;
+  background: #fafafa;
+  right: 0em;
+  display: none;
+  z-index: 999;
+  /*border: 6px solid #e7e7e7;*/
+  width: 16em;
+  padding: 1em;
+  border-top: 1px solid #e7e7e7;
+  border-right: 1px solid #e7e7e7;
+  border-left: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -moz-border-bottom-right-radius: 10px;
+  -moz-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+}
+
+.FormTitle {
+  padding-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.CreditRequestMajor-container {
+  padding-top: 2em;
+  padding-bottom: 1em;
+  background: #f5f5f5; /**  #f6f6f6 **/
+  color: #212121;
+}
+
+.CreditRequestInfo-container {
+  text-align: center;
+}
+
+.CreditRequestTitle {
+  /**padding-left: 2.5em;
+  padding-right: 3.5em;**/
+  padding-top: 1em;
+  font-size: 40px;
+}
+
+.CreditRequestImage-container {
+  text-align: center;
+}
+
+.CreditRequestImage-container {
+  max-width: 25em;
+  display: inline-block;
+}
+
+.CreditRequestImage {
+  /*max-width: 400px;
+  max-height: 214px;*/
+}
+
+.DescriptionMajor-container {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #6ab344;
+  color: #fff;
+}
+
+.DescriptionInfo-container {
+  text-align: center;
+}
+
+.DescriptionIcon-container1 {
+  text-align: center;
+  padding-top: 2.5em;
+}
+
+.DescriptionIcon-container {
+  text-align: center;
+  padding-top: 1em;
+}
+
+.Footer {
+    text-align: center;
+    /**display: flex;**/
+    width: 100%;
+    /*font-size: 15px;*/
+    padding-top: 2em;
+    padding-bottom: 2em;
+    /*margin-top: 2.5em;*/
+    background: #f5f5f5;
+    color: #757575;
+}
+
+/**.FooterSect-container {
+
+}**/
+
+.FooterPolicy-container {
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+}
+
+.Footer-policy {
+    color: #757575;
+    text-decoration: none;
+}
+
+.FooterSocial-container {
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+.FooterIcons-container {
+    width: 100%;
+    /**display: flex;
+    justify-content: space-around;**/
+}
+
+.FooterIncon-f {
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+    /** background: cornflowerblue; **/
+    /** background: #3b5998; **/
+    background: #365899;
+    border-radius: 5em;
+}
+
+.FooterIncon-t {
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+    background: #00abf0;
+    border-radius: 5em;
+}
+
+.FooterIncon-i {
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+    background: #007bb6;
+    border-radius: 5em;
+}
+
+.FooterIncon-c {
+    color: white;
+    text-decoration: none;
+    background: rebeccapurple;
+    padding: 1em;
+    border-radius: 5em;
+}
+
+.FooterLink-container {
+    width: 100;
+    /**display: flex;
+    justify-content: space-around;**/
+    margin-top: 2em;
+}
+
+.FooterLink {
+    color: #757575;
+    text-decoration: none;
+}
+
+.Footer-policy:hover, .FooterLink:hover {
+  color: #6ab344;
+  text-decoration: none;
+  border-bottom: 1.5px solid #6ab344;
+  padding-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.FooterIncon-f:hover, .FooterIncon-t:hover, .FooterIncon-i:hover, .FooterIncon-c:hover {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  div.navbar-collapse>ul.nav>li {
+        display: inline-block;
+    }
+
+    ul.nav>li>a {
+        padding: 2.8em 0.8em;
+    }
+    ul.nav {
+      margin-right: 1em;
+    }
+    a.navbar-brand {
+       max-width: 164px;
+       margin-top:-12px;
+    }
+    header {
+      height: 112px;
+    }
+    .affix {
+      top: 0;
+      -webkit-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.35);
+      z-index: 999;
+    }
+    .affix ul.nav>li>a {
+        /**color: #fff !important;
+        padding: 15px !important;**/
+        padding: 1.8em 0.8em;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+    .affix div.navbar-header>div.LogoMajor-container>a {
+        /**color: #fff !important;
+        padding: 15px !important;**/
+        max-width: 124px;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 767px) {
+  /**div.MainMenu {
+    height: 70px;
+  }**/
+    div.navbar-collapse>ul.nav {
+        display: block;
+        background-color: #fafafa;
+        margin-top: 9px;
+        width: 100%;
+    }
+    header {
+      height: 70px;
+    }
+    div.navbar-toggle {
+      float: left;
+      margin-left: 1em;
+      margin-top: 20px;
+      margin-bottom: 16px;
+    }
+    div.navbar-header>div.LogoMajor-container {
+      float: right;
+    }
+    /**div.navbar-header {
+      height: 85px;
+    }**/
+    div.LogoMajor-container>a.navbar-brand {
+      max-width: 114px;
+      margin-top: -14px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+  .CreditRequestTitle {
+    padding-top: 0.8em;
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .CreditRequestTitle {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 664px) {
+  .CreditRequestTitle {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .CreditRequestTitle {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .DescriptionInfo-container {
+    padding: 0 4em 0 4em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .DescriptionInfo-container {
+    padding: 0 2em 0 2em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .DescriptionInfoCenter-container {
+    border-left: 1px dashed #fff;
+    border-right: 1px dashed #fff;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .DescriptionInfoContent-container {
+    padding: 1.5em 0
+  }
+  .DescriptionInfoCenter-container {
+    padding: 1.5em 5em;
+    border-top: 1px dashed #fff;
+    border-bottom: 1px dashed #fff;
+    display: inline-block;
+  }
+}
