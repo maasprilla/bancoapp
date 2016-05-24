@@ -91,10 +91,10 @@
 						</div>
 						<div class="form-group">
 							<!-- <label for="typeid"></label> -->
-							<select type="text" class="form-control" id="typeid" placeholder="Tipo de documento" required>
-								<option value="" disabled selected>Tipo de documento</option>
-								<option value="1">cédula de ciudadania</option>
-								<option value="2">cédula de extranjería</option>
+							<select type="text" class="form-control FormRegis-input" id="typeid" placeholder="Tipo de documento" required>
+								<option class="InputOption" value="" disabled selected>Tipo de documento</option>
+								<option class="InputOption" value="1">cédula de ciudadania</option>
+								<option class="InputOption" value="2">cédula de extranjería</option>
 							</select>
 							<!-- <input type="text" class="form-control FormRegis-input" id="id" name="id" placeholder="Tipo de documento" required> -->
 						</div>

@@ -61,16 +61,16 @@
 		<section class="FormSingUpMajor-container">
 			<form id="PanelLogin" role="form" class="FormSingUp-Container">
 				<div class="FormTitle-container">
-					<h3 class="text-center FormTitle">Iniciar Sesión</h3>
+					<h2 class="text-center FormTitle">Iniciar Sesión</h2>
 				</div>
 				<div class="form-group">
-					<input type="email" placeholder="Email" class="form-control" required="true">
+					<input type="email" placeholder="Email" class="form-control FormLogin-input" required="true">
 				</div>
 				<div class="form-group">
-					<input type="password" placeholder="Contraseña" class="form-control" required="true">
+					<input type="password" placeholder="Contraseña" class="form-control FormLogin-input" required="true">
 				</div>
 				<div class="form-group">
-					<input type="submit" value="Login" class="btn btn-default">
+					<input type="submit" value="Login" class="btn btn-default LoginButton">
 				</div>
 			</form>
 		</section>

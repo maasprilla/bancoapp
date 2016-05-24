@@ -59,7 +59,7 @@
 		<section class="WelcomeHeaderMajor-container">
 			<div class="container WelcomeHeaderContent">
 				<div class="jumbotron">
-					<h1 class="text-center WelcomeHeader-title">BIENVENIDO A BANCOAPP</h1>
+					<h1 class="text-center WelcomeHeader-title">Bienvenido A Proveersoluciones</h1>
 					<p class="text-center WelcomeHeader-text">Disfruta de todas la ventajas que te ofrecemos y solicita tus créditos desde la comodidad de tu hogar</p>
 				</div>
 			</div>

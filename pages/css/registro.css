@@ -123,6 +123,7 @@ ul.nav>li>a:hover {
 .RegisHeaderMajor-container {
   padding: 1em 0;
   background: #fafafa;
+  border-bottom: 1px solid #c8e6c9;
 }
 
 section.RegisHeaderMajor-container>div.container>div.jumbotron {
@@ -137,15 +138,20 @@ div.jumbotron>p.RegisHeader-text {
   padding-top: 2em;
   padding-bottom: 3em;
   text-align: center;  /** background: #9ccc65 **/
+  background: snow;
+  border-bottom: 1px solid #c8e6c9;
 }
 
 .FormRegisUsers {
+  font-family: 'Arimo';
   background: #f5f5f5;
   border-radius: 1em;
   display: inline-block;
   padding: 1em;
   width: 22em;
   box-shadow: 0 1px 6px rgba(0,0,0,0.35);
+  /**box-shadow: .1em .1em #555;**/
+  /**box-shadow: 1px 1px 1px 1px #777;**/
 }
 
 .FormRegis-title {
@@ -154,6 +160,23 @@ div.jumbotron>p.RegisHeader-text {
 
 .Button-container {
   text-align: center;
+}
+
+input.FormRegis-input:hover {
+  border: 1px solid #66afe9;
+}
+
+select.FormRegis-input:hover {
+  border: 1px solid #66afe9;
+}
+
+input.RegisButton:hover {
+  color: #66afe9; /** #AACB40 **/
+  font-weight: 600;
+  background: #f8f8f8;
+  border: 1px solid #66afe9; /** #AACB40 **/
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .Footer {
@@ -322,10 +345,14 @@ div.jumbotron>p.RegisHeader-text {
 
 @media screen and (max-width: 408px) {
   .FormRegisUsers {
-    width: auto;
+    width: 100%;
   }
   .FormRegis-title {
     font-size: 26px;
+  }
+  .RegisFormMajor-container {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 }
 

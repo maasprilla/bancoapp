@@ -50,7 +50,7 @@
 		<section class="ContactHeaderMajor-container">
 			<div class="container">
 				<div class="jumbotron">
-					<h1 class="text-center ContactHeader-title">CONTÁCTENOS</h1>
+					<h1 class="text-center ContactHeader-title">Contáctenos</h1>
 					<p class="text-center ContactHeader-text">Envianos tu mensaje si tienes dudas, sugerencias o necesitas más información</p>
 					<div class="text-center">
 						<i class="material-icons" style="font-size:48px">account_circle</i>
@@ -60,9 +60,9 @@
 			</div>
 		</section>
 		<section class="FormContactMajor-container">
-			<div class="container ContactContainer">
+			<!-- <div class="container ContactContainer">
 				<div class="row ContactFormInfo-container">
-					<div class="col-md-12 Formulario-container">
+					<div class="col-md-12 Formulario-container"> -->
 						<form action="mail.php" method="POST" enctype="multipart/form-data" class="FormularioContacto">
 							
 								<div class="form-group">
@@ -87,16 +87,13 @@
 									<label class="Form-nameLabel" for="">Mensaje:</label>
 									<textarea class="form-control textarea FormContact-text" id="comments" name="comments" placeholder="Mensaje" rows="5"></textarea><br>
 								</div>
-							
-							
 								<div class="form-group Button-container">
-									<button class="btn btn-default pull-right Contact-button" type="submit">Enviar</button>
+									<input type="submit" value="ENVIAR" class="btn btn-default pull-right Contact-button">
 								</div>
-							
 						</form> 
-					</div>
-				</div>
-			</div>
+					<!-- </div> -->
+				<!-- </div> -->
+			<!-- </div>-->
 		</section>
 	</div>
 	<footer class="Footer">

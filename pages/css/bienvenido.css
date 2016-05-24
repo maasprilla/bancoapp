@@ -150,6 +150,11 @@ ul.nav>li>a:hover {
 
 .WelcomeHeaderMajor-container {
   padding: 1em 0;
+  background: #fafafa;
+}
+
+section.WelcomeHeaderMajor-container>div.container>div.jumbotron {
+  background: #fafafa;
 }
 
 div.jumbotron>p.WelcomeHeader-text {
@@ -370,12 +375,23 @@ div.jumbotron>p.WelcomeHeader-text {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-height: 395px) and (max-width: 767px) {
   div.jumbotron>h1.WelcomeHeader-title {
     font-size: 38px;
   }
   div.jumbotron>p.WelcomeHeader-text {
     font-size: 21px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+
+@media screen and (max-width: 394px) {
+  div.jumbotron>h1.WelcomeHeader-title {
+    font-size: 32px;
+  }
+  div.jumbotron>p.WelcomeHeader-text {
+    font-size: 17px;
     padding-left: 0.5em;
     padding-right: 0.5em;
   }

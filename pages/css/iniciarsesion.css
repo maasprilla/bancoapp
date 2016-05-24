@@ -96,6 +96,12 @@ ul.nav>li>a:hover {
 
 .LoginHeaderMajor-container {
   padding: 1em 0;
+  background: #fafafa;
+  border-bottom: 1px solid #c8e6c9;
+}
+
+section.LoginHeaderMajor-container>div.container>div.jumbotron {
+  background: #fafafa;
 }
 
 div.jumbotron>p.LoginHeader-text {
@@ -103,20 +109,23 @@ div.jumbotron>p.LoginHeader-text {
 }
 
 .FormSingUpMajor-container {
+  padding-top: 2em;
   padding-bottom: 3em;
   text-align: center;
+  background: snow;
+  border-bottom: 1px solid #c8e6c9;
 }
 
 
 .FormSingUp-Container {
-  text-align: center;
-  background: #fafafa;
-  right: 0em;
+  font-family: 'Arimo';
+  background: #f5f5f5;
+  border-radius: 1em;
   display: inline-block;
-  z-index: 999;
-  width: 16em;
+  width: 22em;
   padding: 1em;
-  border-top: 1px solid #e7e7e7;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.35);
+  /**border-top: 1px solid #e7e7e7;
   border-right: 1px solid #e7e7e7;
   border-left: 1px solid #e7e7e7;
   border-bottom: 1px solid #e7e7e7;
@@ -125,12 +134,28 @@ div.jumbotron>p.LoginHeader-text {
   -moz-border-bottom-right-radius: 10px;
   -moz-border-bottom-left-radius: 10px;
   -webkit-border-bottom-right-radius: 10px;
-  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;**/
 }
 
 .FormTitle {
-  padding-bottom: 0.5em;
-  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+input.FormLogin-input:hover {
+  border: 1px solid #66afe9;
+}
+
+select.FormLogin-input:hover {
+  border: 1px solid #66afe9;
+}
+
+input.LoginButton:hover {
+  color: #66afe9; /** #AACB40 **/
+  font-weight: 600;
+  background: #f8f8f8;
+  border: 1px solid #66afe9; /** #AACB40 **/
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .Footer {
@@ -300,5 +325,18 @@ div.jumbotron>p.LoginHeader-text {
 @media screen and (max-width: 767px) {
   div.jumbotron>p.LoginHeader-text {
     font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 408px) {
+  .FormSingUp-Container {
+    width: 100%;
+  }
+  .FormTitle {
+    font-size: 26px;
+  }
+  .FormSingUpMajor-container {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 }
