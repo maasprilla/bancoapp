@@ -56,14 +56,14 @@
 						<p class="Missiontext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe unde ab illum voluptas repellat porro quidem dolore perferendis architecto. Illo, tempore. Obcaecati inventore placeat temporibus, pariatur odio iure id labore.</p>
 					</div>
 					<div class="col-md-6">
-						<img src="../static/images/.jpg" alt="Mission" class="img-responsive thumbnail hvr-glow hvr-round-corners CreditRequestImage" style="max-width:100%">
+						<img src="../static/images/.jpg" alt="Mission" class="img-responsive hvr-glow hvr-round-corners CreditRequestImage" style="max-width:100%">
 					</div>
 				</div>
 			</div>
 			<div class="container VisionContainer">
 				<div class="row VisionInfo-container">
 					<div class="col-md-6">
-						<img src="../static/images/.jpg" alt="Vision" class="img-responsive thumbnail hvr-glow hvr-round-corners CreditRequestImage" style="max-width:100%">
+						<img src="../static/images/.jpg" alt="Vision" class="img-responsive hvr-glow hvr-round-corners CreditRequestImage" style="max-width:100%">
 					</div>
 					<div class="col-md-6">
 						<h2 class="text-center VisioTitle">Visión</h2>

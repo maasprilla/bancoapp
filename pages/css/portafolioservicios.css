@@ -95,17 +95,25 @@ ul.nav>li>a:hover {
 }
 
 .WhoTitle {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid white;
+  padding-bottom: 0.4em;
+  display: inline-block;
 }
 
 .MVMajor-container {
   padding-top: 3em;
   padding-bottom: 2em;
+  background: #6ab344;
+  color: white;
+  text-align: center;
 }
 
 .IdentityPanelMajor-container {
   padding-top: 2em;
   padding-bottom: 3em;
+  background: #fdfdfd;
+  border-bottom: 1px solid #dcdcdc;
 }
 
 .IdentityPanel-link {
@@ -121,10 +129,26 @@ ul.nav>li>a:hover {
 .TeamMajor-container {
   padding-top: 3em;
   padding-bottom: 2em;
+  border-bottom: 1px solid #c8e6c9;
+  background: #9ccc65;
+  color: white;
+  text-align: center;
 }
 
 .TeamMain-title {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid white;
+  padding-bottom: 0.4em;
+  display: inline-block;
+}
+
+.TeamMain-title:hover {
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.Producto-text {
+  color: black;
 }
 
 .Footer {

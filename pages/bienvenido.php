@@ -114,7 +114,7 @@
 								<i class="material-icons" style="font-size:48px">arrow_downward</i>
 							</div>
 							<div class="WelcomeCreditReqLink-container">
-								<a href="credito.html" class="WelcomeCreditReq-link btn btn-info">Solicita tu crédito</a>
+								<a href="credito.php" class="WelcomeCreditReq-link btn btn-info">Solicita tu crédito</a>
 							</div>
 						</div>
 					</div>

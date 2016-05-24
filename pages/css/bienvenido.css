@@ -151,6 +151,7 @@ ul.nav>li>a:hover {
 .WelcomeHeaderMajor-container {
   padding: 1em 0;
   background: #fafafa;
+  border-bottom: 1px solid #c8e6c9;
 }
 
 section.WelcomeHeaderMajor-container>div.container>div.jumbotron {
@@ -162,8 +163,9 @@ div.jumbotron>p.WelcomeHeader-text {
 }
 
 .WelcomeDescMajor-container {
-  padding-top: 0.5em;
+  padding-top: 1.5em;
   padding-bottom: 3em;
+  background: #9ccc65;
 }
 
 .WelcomeDescription-imageContainer {
@@ -193,8 +195,21 @@ div.jumbotron>p.WelcomeHeader-text {
   font-size: 15px;
 }
 
+div.WelcomeDescriptionLink-container>a.btn-info {
+  background-color: #6ab344;
+  border-color: #9ccc65;
+}
+
+/**div.WelcomeDescriptionLink-container>a.btn-info:hover {
+  background-color: #9ccc65;
+  border-color: #6ab344;
+}**/
+
 .WelcomeCreditReqMajor-container {
   padding-bottom: 3em;
+  padding-top: 2em;
+  background: #fdfdfd;
+  border-bottom: 1px solid #c8e6c9;
 }
 
 .WelcomeCreditReq-text {
@@ -205,6 +220,16 @@ div.jumbotron>p.WelcomeHeader-text {
 .WelcomeCreditReqLink-container {
   margin-top: 0.5em;
 }
+
+div.WelcomeCreditReqLink-container>a.btn-info {
+  background-color: #6ab344;
+  border-color: #9ccc65;
+}
+
+/*div.WelcomeCreditReqLink-container>a.btn-info:hover {
+  background-color: #9ccc65;
+  border-color: #6ab344;
+}*/
 
 .WelcomeCreditReq-link {
   width: 100%;
@@ -317,7 +342,7 @@ div.jumbotron>p.WelcomeHeader-text {
        max-width: 164px;
        margin-top:-12px;
     }
-    
+
     header {
       height: 112px;
     }
