@@ -81,7 +81,7 @@
 			<!-- <div class="container">
 				<div class="row">
 				<div class="col-md-12"> -->
-					<form action="" method="post" role="form" class="FormRegisUsers">
+					<form action="../scriptphp/registrarusuario.php" method="post" role="form" class="FormRegisUsers">
 						<h2 class="text-center FormRegis-title">Registro De Usuarios</h2>
 						<div class="form-group">
 							<input type="text" class="form-control FormRegis-input" id="nombre" name="name" placeholder="Nombres" required>
@@ -91,7 +91,7 @@
 						</div>
 						<div class="form-group">
 							<!-- <label for="typeid"></label> -->
-							<select type="text" class="form-control FormRegis-input" id="typeid" placeholder="Tipo de documento" required>
+							<select type="text" class="form-control FormRegis-input" id="typeid" name="tipodocumento" placeholder="Tipo de documento" required>
 								<option class="InputOption" value="" disabled selected>Tipo de documento</option>
 								<option class="InputOption" value="1">cédula de ciudadania</option>
 								<option class="InputOption" value="2">cédula de extranjería</option>
@@ -99,7 +99,7 @@
 							<!-- <input type="text" class="form-control FormRegis-input" id="id" name="id" placeholder="Tipo de documento" required> -->
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control FormRegis-input" id="id" name="id" placeholder="Número de documento" required>
+							<input type="text" class="form-control FormRegis-input" id="id" name="numerodocumento" placeholder="Número de documento" required>
 						</div>
 						<div class="form-group">
 							<input type="email" class="form-control FormRegis-input" id="email" name="email" placeholder="E-mail" required>
