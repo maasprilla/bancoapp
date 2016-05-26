@@ -121,21 +121,21 @@
 				<div class="row DescriptionInfo-container">
 					<div class="col-md-4 DescriptionInfoContent-container">
 						<h2 class="DescriptionTitle">¿Qué es?</h2>
-						<p class="DescriptionText">xxx es una aplicativo Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum iste, officiis. Necessitatibus corporis, architecto ex magnam, similique recusandae quaerat excepturi quod obcaecati, in ut. Provident alias quia, commodi accusantium ut.</p>
+						<p class="DescriptionText">ProveeersolucionesApp es una aplicativo creado para facilitar y agilizar los estudios de créditos mediante el envio de la comunicación requerida por medio del mismo.</p>
 						<div class="DescriptionIcon-container1 hvr-sink">
 							<i class="material-icons" style="font-size:48px">account_balance</i>
 						</div>
 					</div>
 					<div class="col-md-4 DescriptionInfoCenter-container">
 						<h2 class="DescriptionTitle">¿Cómo funciona?</h2>
-						<p class="DescriptionText">Bla bla bla Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit corrupti itaque asperiores magni ad cumque odit accusantium omnis voluptates similique. Incidunt debitis ipsam blanditiis minima cumque quo eligendi, accusamus reprehenderit.</p>
+						<p class="DescriptionText">Se puede acceder desde la plataforma web o descargandolo en un teléfono móvil. Inicialmente el usuario realizará un registro con datos básico, un correo y una contraseña con los que posteriormente accederá al sistema.</p>
 						<div class="DescriptionIcon-container hvr-sink">
 							<i class="material-icons" style="font-size:48px">desktop_windows</i>
 						</div>
 					</div>
 					<div class="col-md-4 DescriptionInfoContent-container">
 						<h2 class="DescriptionTitle">Ventajas</h2>
-						<p class="DescriptionText">Innovación, comodidad de la casa, etc, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid mollitia, aspernatur, tempora ut facilis, voluptates voluptate saepe iure architecto expedita vitae magnam unde possimus. Quae adipisci vitae veritatis est sunt?</p>
+						<p class="DescriptionText">ProveeersolucionesApp permite llenar solicitudes de crédito en línea y evita el traslado innecesario de los clientes al banco, disminuyendo el tiempo usado a la hora de entregar documentación.</p>
 						<div class="DescriptionIcon-container hvr-sink">
 							<i class="material-icons" style="font-size:48px">tag_faces</i>
 						</div>
@@ -150,17 +150,23 @@
 				<div class="col-md-4">
 					<h4 class="FooterTitle-about"><strong>Acerca de</strong></h4>
 					<div class="Footer-tel">
-						<span class="glyphicon glyphicon-phone-alt"></span> Tel (+57) 555 55 55<br>
+						<span class="glyphicon glyphicon-phone-alt"></span> Tel (+57) 318 787 02 16<br>
+					</div>
+					<div class="Footer-tel">
+						<span class="glyphicon glyphicon-phone-alt"></span> Tel (+57) 317 523 57 08<br>
 					</div>
 					<div class="Footer-email">
-						<span class="glyphicon glyphicon-envelope"></span> E-mail: email@email.com<br>
+						<span class="glyphicon glyphicon-envelope"></span> E-mail: lakathevanegas@gmail.com<br>
+					</div>
+					<div class="Footer-email">
+						<span class="glyphicon glyphicon-envelope"></span> E-mail: nataly_1014@hotmail.com<br>
 					</div>
 					<div class="Footer-place">
-						<span class="glyphicon glyphicon-map-marker"></span> Calle 1000 # 50 - 1000, Palmira<br>Valle del Cauca - Colombia<br>
+						<span class="glyphicon glyphicon-map-marker"></span> Carrera 42a # 52 - 21, Palmira<br>Valle del Cauca - Colombia<br>
 					</div>
 				</div>
 				<div class="col-md-4 FooterPolicy-container">
-					<a href="" class="Footer-policy">Políticas y términos de uso</a>
+					<a href="pages/politicas.php" target="_blank" class="Footer-policy">Políticas y términos de uso y privacidad</a>
 				</div>
 				<div class="col-md-4 FooterSocial-container">
 					<div class="FooterIcons-container">

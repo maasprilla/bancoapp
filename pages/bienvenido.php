@@ -109,12 +109,20 @@
 						</div>
 					</div>
 					<div class="col-md-4 WelcomeCreditReqCenter-container" style="text-align:center">
+						<div class="thumbnail hvr-glow" style="width:100%; margin-bottom:0.7em;">
+							<div class="DescriptionIcon-container hvr-hang">
+								<i class="material-icons" style="font-size:48px">arrow_downward</i>
+							</div>
+							<div class="WelcomeCreditReqLink-container">
+								<a href="credito.php" class="WelcomeCreditReq-link btn btn-info">Solicita tu crédito en línea</a>
+							</div>
+						</div>
 						<div class="thumbnail hvr-glow" style="width:100%">
 							<div class="DescriptionIcon-container hvr-hang">
 								<i class="material-icons" style="font-size:48px">arrow_downward</i>
 							</div>
 							<div class="WelcomeCreditReqLink-container">
-								<a href="credito.php" class="WelcomeCreditReq-link btn btn-info">Solicita tu crédito</a>
+								<a href="" class="WelcomeCreditReq-link btn btn-info">Descarga el formulario de solicitud</a>
 							</div>
 						</div>
 					</div>
@@ -137,17 +145,23 @@
 				<div class="col-md-4">
 					<h4 class="FooterTitle-about"><strong>Acerca de</strong></h4>
 					<div class="Footer-tel">
-						<span class="glyphicon glyphicon-phone-alt"></span> Tel (+57) 555 55 55<br>
+						<span class="glyphicon glyphicon-phone-alt"></span> Tel (+57) 318 787 02 16<br>
+					</div>
+					<div class="Footer-tel">
+						<span class="glyphicon glyphicon-phone-alt"></span> Tel (+57) 317 523 57 08<br>
 					</div>
 					<div class="Footer-email">
-						<span class="glyphicon glyphicon-envelope"></span> E-mail: email@email.com<br>
+						<span class="glyphicon glyphicon-envelope"></span> E-mail: lakathevanegas@gmail.com<br>
+					</div>
+					<div class="Footer-email">
+						<span class="glyphicon glyphicon-envelope"></span> E-mail: nataly_1014@hotmail.com<br>
 					</div>
 					<div class="Footer-place">
-						<span class="glyphicon glyphicon-map-marker"></span> Calle 1000 # 50 - 1000, Palmira<br>Valle del Cauca - Colombia<br>
+						<span class="glyphicon glyphicon-map-marker"></span> Carrera 42a # 52 - 21, Palmira<br>Valle del Cauca - Colombia<br>
 					</div>
 				</div>
 				<div class="col-md-4 FooterPolicy-container">
-					<a href="" class="Footer-policy">Políticas y términos de uso</a>
+					<a href="politicas.php" target="_blank" class="Footer-policy">Políticas y términos de uso y privacidad</a>
 				</div>
 				<div class="col-md-4 FooterSocial-container">
 					<div class="FooterIcons-container">

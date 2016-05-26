@@ -53,7 +53,7 @@
 				<div class="row MissionInfo-container">
 					<div class="col-md-6">
 						<h2 class="text-center MissionTitle">Misión</h2>
-						<p class="Missiontext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe unde ab illum voluptas repellat porro quidem dolore perferendis architecto. Illo, tempore. Obcaecati inventore placeat temporibus, pariatur odio iure id labore.</p>
+						<p class="Missiontext">Nuestro aplicativo busca proporcionar las tecnologías más innovadoras y avanzadas a medida de las necesidades que se presenten en la organización, con el objetivo de incrementar su competitividad y productividad. Para ello implementamos soluciones prácticas adaptadas a la aprobación de créditos eficazmente, desarrollando nuevas soluciones creativas, partiendo del aprovechamiento de las nuevas tecnologías.</p>
 					</div>
 					<div class="col-md-6">
 						<img src="../static/images/.jpg" alt="Mission" class="img-responsive hvr-glow hvr-round-corners CreditRequestImage" style="max-width:100%">
@@ -67,7 +67,7 @@
 					</div>
 					<div class="col-md-6">
 						<h2 class="text-center VisioTitle">Visión</h2>
-						<p class="Visiontext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ratione molestias aliquid, nulla sit eum libero eveniet saepe fugit, deleniti sed. Provident magni odit consequatur consequuntur accusamus nisi porro repellat.</p>
+						<p class="Visiontext">Queremos estar comprometidos con los problemas de nuestros clientes de forma transparente y eficaz para convertirnos en su socio de confianza, buscando en 2020 ser una de las entidades con la más grande cobertura a nivel informático. En nuestra visión queremos ser una entidad de referencia, que camina con el cambio de la tecnología y la sociedad, dando a conocer las posibilidades de los estándares y tecnologías libres. Esta labor se debe desempeñar de forma ética y satisfactoria para nosotros, nuestros clientes y el resto de la sociedad.</p>
 					</div>
 				</div>
 			</div>
@@ -82,15 +82,25 @@
 				<div class="tab-content IdentityPanelDescription-container">
 					<div role="tabpanel" class="tab-pane fade in active" id="objetivo">
 						<br>
-						<p class="IdentityPanel-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque assumenda, ducimus neque distinctio cum nam ipsum minus ratione asperiores mollitia quia numquam error sapiente possimus quisquam quibusdam nesciunt pariatur maxime!</p>
+						<p class="IdentityPanel-text">Crear un aplicativo creativo y seguro de forma sencilla, práctica y eficaz para el manejo y envio de la documentación necesaria para el estudio crediticio, facilitando y agilizando la aprobación de créditos para aumentar las utilidades financieras de la entidad.</p>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="identidadcorp">
 						<br>
-						<p class="IdentityPanel-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem vero, sit sequi ut quam id officia nemo unde, vitae recusandae fugit numquam odit velit harum quo cupiditate quae corrupti dolore.</p>
+						<p class="IdentityPanel-text">Esta aplicación genera un valor agregado a la comunidad financiera, ya que con esta se podrá agilizar trámites que tardaban días en resolver y brindar comodidad a los clientes al no tener que dirigirse a la oficina a presentar los documentos para un estudio financiero, también disminuye los costos de transacciones comerciales y hace más competitivo al banco frente a otros.</p>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="valorescorp">
 						<br>
-						<p class="IdentityPanel-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt asperiores nobis iste reprehenderit a cumque earum error laboriosam. Sed magni officiis sapiente, minus recusandae aperiam non. Aspernatur explicabo consequuntur harum!</p>
+						<li class="IdentityPanel-text"><b>Honestidad: </b>En todas nuestras actuaciones está presente la honradez, la sinceridad y la integridad.</li>
+						<br>
+						<li class="IdentityPanel-text"><b>Responsabilidad: </b>Cumplimos con los deberes y obligaciones con clientes y comunidad en general.</li>
+						<br>
+						<li class="IdentityPanel-text"><b>Excelencia: </b>Nuestra cultura de mejoramiento contínuo, innovación, liderazgo y perseverancia nos permitirá superar las expectativas de nuestros clientes.</li>
+						<br>
+						<li class="IdentityPanel-text"><b>Confidencialidad: </b>Toda la información depositada es de absoluta reserva, lo cual implica el compromiso de no revelar ninguna información confidencial obtenida durante y después de la prestación de nuestro servicio.</li>
+						<br>
+						<li class="IdentityPanel-text"><b>Trabajo en equipo: </b>Entre los integrantes de nuestro outsourcing se comparten conocimientos, experiencias y esfuerzos, aportando lo mejor de cada uno y asumiendo responsabilidades para la realización de los objetivos de nuestra organización.</li>
+						<br>
+						<li class="IdentityPanel-text"><b>Transparencia: </b>En nuestra compañía integrante deben tener trasparencia y ética para la realización de nuestros créditos.</li>
 					</div>
 				</div>
 			</div>
@@ -157,17 +167,23 @@
 				<div class="col-md-4">
 					<h4 class="FooterTitle-about"><strong>Acerca de</strong></h4>
 					<div class="Footer-tel">
-						<span class="glyphicon glyphicon-phone-alt"></span> Tel (+57) 555 55 55<br>
+						<span class="glyphicon glyphicon-phone-alt"></span> Tel (+57) 318 787 02 16<br>
+					</div>
+					<div class="Footer-tel">
+						<span class="glyphicon glyphicon-phone-alt"></span> Tel (+57) 317 523 57 08<br>
 					</div>
 					<div class="Footer-email">
-						<span class="glyphicon glyphicon-envelope"></span> E-mail: email@email.com<br>
+						<span class="glyphicon glyphicon-envelope"></span> E-mail: lakathevanegas@gmail.com<br>
+					</div>
+					<div class="Footer-email">
+						<span class="glyphicon glyphicon-envelope"></span> E-mail: nataly_1014@hotmail.com<br>
 					</div>
 					<div class="Footer-place">
-						<span class="glyphicon glyphicon-map-marker"></span> Calle 1000 # 50 - 1000, Palmira<br>Valle del Cauca - Colombia<br>
+						<span class="glyphicon glyphicon-map-marker"></span> Carrera 42a # 52 - 21, Palmira<br>Valle del Cauca - Colombia<br>
 					</div>
 				</div>
 				<div class="col-md-4 FooterPolicy-container">
-					<a href="" class="Footer-policy">Políticas y términos de uso</a>
+					<a href="politicas.php" target="_blank" class="Footer-policy">Políticas y términos de uso y privacidad</a>
 				</div>
 				<div class="col-md-4 FooterSocial-container">
 					<div class="FooterIcons-container">
