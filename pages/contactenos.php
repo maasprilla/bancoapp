@@ -53,7 +53,7 @@
 					<h1 class="text-center ContactHeader-title">Contáctenos</h1>
 					<p class="text-center ContactHeader-text">Envianos tu mensaje si tienes dudas, sugerencias o necesitas más información</p>
 					<div class="text-center">
-						<i class="material-icons" style="font-size:48px">account_circle</i>
+						<i class="material-icons" style="font-size:48px">email</i>
 					</div>
 
 				</div>

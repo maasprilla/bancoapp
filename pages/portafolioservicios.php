@@ -48,29 +48,43 @@
 			</div>
 		</header>
 		<section class="MVMajor-container">
-			<div class="container MissionContainer">
+			<div class="container MVContainer">
 				<h1 class="text-center WhoTitle">¿QUIÉNES SOMOS?</h1>
 				<div class="row MissionInfo-container">
-					<div class="col-md-6">
-						<h2 class="text-center MissionTitle">Misión</h2>
-						<p class="Missiontext">Nuestro aplicativo busca proporcionar las tecnologías más innovadoras y avanzadas a medida de las necesidades que se presenten en la organización, con el objetivo de incrementar su competitividad y productividad. Para ello implementamos soluciones prácticas adaptadas a la aprobación de créditos eficazmente, desarrollando nuevas soluciones creativas, partiendo del aprovechamiento de las nuevas tecnologías.</p>
+					<div class="col-md-6 MissionContent">
+						<div class="WhoContent-container hvr-glow hvr-round-corners">
+							<h2 class="text-center MissionTitle">Misión</h2>
+							<p class="Missiontext">Nuestro aplicativo busca proporcionar las tecnologías más innovadoras y avanzadas a medida de las necesidades que se presenten en la organización, con el objetivo de incrementar su competitividad y productividad. Para ello implementamos soluciones prácticas adaptadas a la aprobación de créditos eficazmente, desarrollando nuevas soluciones creativas, partiendo del aprovechamiento de las nuevas tecnologías.</p>
+							<div class="WhoImage-container">
+								<img src="../static/images/mision.png" alt="Mission" class="img-responsive WhoImage" style="max-width:100%; margin-top:1.7em;">
+							</div>
+						</div>
 					</div>
-					<div class="col-md-6">
-						<img src="../static/images/.jpg" alt="Mission" class="img-responsive hvr-glow hvr-round-corners CreditRequestImage" style="max-width:100%">
+					<div class="col-md-6 VissionContent">
+						<div class="WhoContent-container hvr-glow hvr-round-corners">
+							<h2 class="text-center VisionTitle">Visión</h2>
+							<p class="Visiontext">Queremos estar comprometidos con los problemas de nuestros clientes de forma transparente y eficaz para convertirnos en su socio de confianza, buscando en 2020 ser una de las entidades con la más grande cobertura a nivel informático. En nuestra visión queremos ser una entidad de referencia, que camina con el cambio de la tecnología y la sociedad, dando a conocer las posibilidades de los estándares y tecnologías libres. Esta labor se debe desempeñar de forma ética y satisfactoria para nosotros, nuestros clientes y el resto de la sociedad.</p>
+							<div class="WhoImage-container">
+								<img src="../static/images/businesspeople.png" alt="Vision" class="img-responsive WhoImage" style="max-width:100%">
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="container VisionContainer">
+			<!-- <div class="container VisionContainer">
 				<div class="row VisionInfo-container">
 					<div class="col-md-6">
-						<img src="../static/images/.jpg" alt="Vision" class="img-responsive hvr-glow hvr-round-corners CreditRequestImage" style="max-width:100%">
+						<div class="WhoImage-container">
+							<img src="../static/images/businesspeople.png" alt="Vision" class="img-responsive hvr-glow hvr-round-corners CreditRequestImage" style="max-width:100%">
+						</div>
 					</div>
 					<div class="col-md-6">
-						<h2 class="text-center VisioTitle">Visión</h2>
-						<p class="Visiontext">Queremos estar comprometidos con los problemas de nuestros clientes de forma transparente y eficaz para convertirnos en su socio de confianza, buscando en 2020 ser una de las entidades con la más grande cobertura a nivel informático. En nuestra visión queremos ser una entidad de referencia, que camina con el cambio de la tecnología y la sociedad, dando a conocer las posibilidades de los estándares y tecnologías libres. Esta labor se debe desempeñar de forma ética y satisfactoria para nosotros, nuestros clientes y el resto de la sociedad.</p>
+						<div class="WhoImage-container">
+							<img src="../static/images/mision.png" alt="Mission" class="img-responsive hvr-glow hvr-round-corners CreditRequestImage" style="max-width:100%">
+						</div>
 					</div>
 				</div>
-			</div>
+			</div>-->
 		</section>
 		<section id="Identity" class="IdentityPanelMajor-container">
 			<div class="container IdentityPanelContainer">

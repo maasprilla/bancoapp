@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>BancoApp</title>
-	<link rel="stylesheet" href="css/politicas.css">
+	<link rel="stylesheet" href="css/descarga.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext">
@@ -22,7 +22,7 @@
 <body class="body" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 	<div class="Major-container">
 
-		<header>
+	<header>
 			<div class="navbar navbar-fixed-top MainMenu" role="navigation" style="margin-bottom:0" data-spy="affix" data-offset-top="20">
 				<div class="container-fluid NavbarElements-container">
 					<div class="navbar-header">
@@ -39,55 +39,56 @@
 					</div>
 					<div class="navbar-collapse collapse MainMenu-listContainer">
 						<ul class="nav navbar-right MainMenu-list">
-							<li class="MainMenu-item"><a href="../index.php" class="MainMenu-link">Inicio</a></li>
+							<li class="MainMenu-item"><a href="bienvenido.php" class="MainMenu-link">Inicio</a></li>
+							<li class="MainMenu-item"><a href="credito.php" class="MainMenu-link">Crédito</a></li>
 							<li class="MainMenu-item"><a href="portafolioservicios.php" class="MainMenu-link">Portafolio de Servicios</a>
 							<li class="MainMenu-item"><a href="contactenos.php" class="MainMenu-link">Contáctenos</a></li>
+							<li ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()"><a><span class="glyphicon glyphicon-user"></span></a>
+								<div id="Options" class="Options z-depth-1">
+									<div class="OptSelect">
+										<a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#777">Cerrar Sesion</a>
+									</div>
+								</div>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</header>
-		<section class="PolicyHeaderMajor-container">
+		<section class="RegisHeaderMajor-container">
 			<div class="container">
 				<div class="jumbotron">
-					<h1 class="text-center PolicyHeader-title">Políticas y términos de uso y privacidad</h1>
-					<p class="text-center PolicyHeader-text">Conoce nuestras condiciones antes de tomar cualquier decisión.</p>
+					<h1 class="text-center RegisHeader-title">Para solicitar tu crédito...</h1>
+					<p class="text-center RegisHeader-text">También puedes intentar descargar el formulario</p>
 					<div class="text-center">
-						<i class="material-icons" style="font-size:48px">vpn_key</i>
-						<i class="material-icons" style="font-size:48px">lock</i>
+						<i class="material-icons" style="font-size:48px">file_download</i>
 					</div>
-
+					<a href="" class="DownloadForm-link">Descargalo aquí</a>
 				</div>
 			</div>
 		</section>
-		<section class="PolicyContent-container">
+		<section class="UploadMajor-container">
 			<div class="container">
+				<h1 class="text-center UploadMain-title">Una vez hayas descargado el formulario pordás diligenciarlo</h1>
+				<div class="text-center">
+					<i class="material-icons" style="font-size:48px;">assignment</i>
+				</div>
 				<div class="row">
 					<div class="col-md-2"></div>
-					<div class="col-md-8" style="text-align:justify">
-						<h1 class="text-center PolicyMain-title">ProveersolucionesApp</h1>
-						<br><br>
-						<div class="SecondTitle-container" style="text-align:center">
-							<h3 class="text-center PolicySecond-title">Políticas y términos</h3>
+					<div class="col-md-8">
+						<h3 class="text-center UploadSecond-title">Cuando hayas diligenciado el formulario podrás subirlo para hacer efectiva tu solicitud</h3><br>
+						<a href="" class="UploadLink">Adjuntalo aquí</a>
+						<div class="text-center">
+							<i class="material-icons" style="font-size:48px;">file_upload</i>
 						</div>
 						<br>
-						<li class="PolicyText">Al utilizar la aplicación, aceptara automáticamente estos términos. Asegúrese de leerlos atentamente antes de utilizar la aplicación.</li>
+						<h3 class="text-center UploadThird-title">No olvides adjuntar también...</h3>
 						<br>
-						<li class="PolicyText">Le ofrecemos esta aplicación para su uso personal sin ningún costo, pero debe saber que no está autorizado a enviársela a otra persona ni a copiar o modificar la aplicación, así como ninguna parte de esta, ni nuestras marcas comerciales de ningún modo.</li>
-						<br>
-						<li class="PolicyText">No deberá intentar extraer el código fuente de la aplicación, traducir la aplicación a otros idiomas ni crear versiones derivadas.</li>
-						<br>
-						<li class="PolicyText">La aplicación y todas las marcas comerciales, los derechos de autor, los derechos sobre bases de datos y demás derechos de propiedad intelectual relacionados continuarán siendo propiedad de los administradores.</li>
-						<br>
-						<li class="PolicyText">Pretende garantizar que la aplicación sea siempre lo más útil y eficiente posible. Por este motivo, nos reservamos el derecho de efectuar cambios, en cualquier momento y por cualquier motivo.</li>
-						<br>
-						<li class="PolicyText">En ningún caso se aplicarán cargos por la aplicación o sus servicios.</li>
-						<br>
-						<li class="PolicyText">Toda información y datos relacionados con clientes y/o usuarios será confidencial y por ningún motivo ninguna persona puede acceder a ellos sin autorización.</li>
-						<br>
-						<li class="PolicyText">Estos datos no serán usados con fines judiciales o investigativos.</li>
-						<br>
-						<li class="PolicyText">En cuanto al registro de usuarios, es indispensable que la información o documentación suministrada sea verídica de lo contrario se procederá a eliminar y bloquear al usuario.</li>
+						<div class="form-group" style="text-align:center;">
+							<li class="UploadItem">Tu cédula escaneada al 150<a href="" class="AttachLink"> (Aquí)</a></li>
+							<li class="UploadItem">Tu firma escaneada<a href="" class="AttachLink"> (Aquí)</a></li>
+							<li class="UploadItem">Tus comprobantes de pago<a href="" class="AttachLink"> (Aquí)</a></li>
+						</div><br>
 					</div>
 					<div class="col-md-2"></div>
 				</div>
@@ -116,7 +117,7 @@
 					</div>
 				</div>
 				<div class="col-md-4 FooterPolicy-container">
-					<a href="politicas.php" class="Footer-policy">Políticas y términos de uso y privacidad</a>
+					<a href="politicas.php" target="_blank" class="Footer-policy">Políticas y términos de uso y privacidad</a>
 				</div>
 				<div class="col-md-4 FooterSocial-container">
 					<div class="FooterIcons-container">
@@ -138,5 +139,6 @@
 	<script src="../static/js/jquery-1.12.2.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script src="http://code.jquery.com/jquery-1.12.2.min.js"></script>
+	<script src="../static/js/desplegablelogout.js"></script>
 </body>
 </html>

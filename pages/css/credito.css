@@ -156,10 +156,16 @@ ul.nav>li>a:hover {
 
 section.CreditHeaderMajor-container>div.container>div.jumbotron {
   background: #fafafa;
+  text-align: center;
 }
 
 div.jumbotron>p.CreditHeader-text {
   font-size: 27px;
+}
+
+.DownloadLink {
+  font-size: 21px;
+  font-weight: 600;
 }
 
 .FormCreditMajor-container {
@@ -207,6 +213,10 @@ input.CreditButton:hover {
 
 textarea.FormDescriptionCredit-text:hover {
   border: 1px solid #66afe9;
+}
+
+.AttachLink {
+  font-weight: 600;
 }
 
 .Footer {

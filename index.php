@@ -79,16 +79,16 @@
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
-						<img src="static/images/sli1.jpg" alt="Chania">
+						<img src="static/images/1.jpg" alt="ProveerSolucionesApp">
 					</div>
 					<div class="item">
-						<img src="static/images/sli2.jpg" alt="Chania">
+						<img src="static/images/2.jpg" alt="ProveerSolucionesApp">
 					</div>
 					<div class="item">
-						<img src="static/images/sli3.jpg" alt="Flower">
+						<img src="static/images/3.jpg" alt="ProveerSolucionesApp">
 					</div>
 					<div class="item">
-						<img src="static/images/sli4.jpg" alt="Flower">
+						<img src="static/images/4.jpg" alt="ProveerSolucionesApp">
 					</div>
 				</div>
 				<!-- Left and right controls -->

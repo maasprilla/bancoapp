@@ -94,72 +94,94 @@ ul.nav>li>a:hover {
     font-weight: 900;
 }
 
-.WhoTitle {
-  margin-bottom: 1em;
-  /**border-bottom: 1px solid white;**/
-  padding-bottom: 0.4em;
-  display: inline-block;
-}
-
-.MissionTitle, .VisionTitle {
-  margin-bottom: 0.6em;
-  border-bottom: 1px solid white;
-  display: inline-block;
-}
-
-.MVMajor-container {
-  padding-top: 3em;
-  padding-bottom: 2em;
-  background: #6ab344;
-  color: white;
+.FormSingUp-Container {
+  position: absolute;
   text-align: center;
+  background: #fafafa;
+  right: 0em;
+  display: none;
+  z-index: 999;
+  width: 16em;
+  padding: 1em;
+  border-top: 1px solid #e7e7e7;
+  border-right: 1px solid #e7e7e7;
+  border-left: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -moz-border-bottom-right-radius: 10px;
+  -moz-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
 }
 
-.WhoImage-container {
-  max-width: 21em;
+.FormTitle {
+  padding-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.Options {
+  position: absolute;
   display: inline-block;
+  text-align: center;
+  background: #fafafa;
+  right: 0em;
+  display: none;
+  border-top: 1px solid #e7e7e7;
+  border-right: 1px solid #e7e7e7;
+  border-left: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -moz-border-bottom-right-radius: 10px;
+  -moz-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
 }
 
-.IdentityPanelMajor-container {
-  padding-top: 2em;
-  padding-bottom: 3em;
-  background: #fdfdfd;
-  border-bottom: 1px solid #dcdcdc;
+.OptSelect {
+  width: 15em;
+  padding: 1em;
 }
 
-.IdentityPanel-link {
-  color: #333;
-  font-weight: 700;
+.MainMenu-linkLogOut:hover {
+  text-decoration: none;
 }
 
-.IdentityPanel-link:hover {
-  color: #333;
-  font-weight: 700;
-}
-
-.TeamMajor-container {
-  padding-top: 3em;
-  padding-bottom: 2em;
+.RegisHeaderMajor-container {
+  padding: 1em 0;
+  background: #fafafa;
   border-bottom: 1px solid #c8e6c9;
-  background: #9ccc65;
-  color: white;
+}
+
+section.RegisHeaderMajor-container>div.container>div.jumbotron {
+  background: #fafafa;
   text-align: center;
 }
 
-.TeamMain-title {
-  margin-bottom: 1em;
-  border-bottom: 1px solid white;
-  padding-bottom: 0.4em;
-  display: inline-block;
+div.jumbotron>p.RegisHeader-text {
+  font-size: 27px;
 }
 
-.TeamMain-title:hover {
-  color: black;
-  border-bottom: 1px solid black;
+.DownloadForm-link {
+  font-size: 21px;
+  font-weight: 600;
 }
 
-.Producto-text {
-  color: black;
+.UploadMajor-container {
+  text-align: center;
+  border-bottom: 1px solid #c8e6c9;
+  padding-top: 1.5em;
+  background: #6ab344; /** #9ccc65 **/
+}
+
+.UploadLink {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.AttachLink {
+  font-weight: 600;
 }
 
 .Footer {
@@ -326,18 +348,8 @@ ul.nav>li>a:hover {
     }
 }
 
-@media screen and (min-width: 992px) {
-  .MissionContent {
-    border-right: 0.5px dashed white;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .VissionContent {
-    border-top: 1px dashed #fff;
-    padding-top: 0.5em;
-  }
-  .MissionContent {
-    padding-bottom: 0.5em;
+@media screen and (max-width: 767px) {
+  div.jumbotron>p.RegisHeader-text {
+    font-size: 21px;
   }
 }

@@ -42,7 +42,7 @@
 							<li class="MainMenu-item"><a href="bienvenido.php" class="MainMenu-link">Inicio</a></li>
 							<li class="MainMenu-item"><a href="portafolioservicios.php" class="MainMenu-link">Portafolio de Servicios</a>
 							<li class="MainMenu-item"><a href="contactenos.php" class="MainMenu-link">Contáctenos</a></li>
-							<li ng-show="vm.isAuthenticated()" class="MainMenu-item"><a><span class="glyphicon glyphicon-user" onclick="showOptions()"></span></a>
+							<li ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()"><a><span class="glyphicon glyphicon-user"></span></a>
 								<div id="Options" class="Options z-depth-1">
 									<div class="OptSelect">
 										<a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#777">Cerrar Sesion</a>
@@ -58,10 +58,11 @@
 			<div class="container">
 				<div class="jumbotron">
 					<h1 class="text-center CreditHeader-title">Solicita tu crédito</h1>
-					<p class="text-center CreditHeader-text">Llena el formulario para realizar una solicitud</p>
+					<p class="text-center CreditHeader-text">Llena el formulario para realizar una solicitud en línea</p>
 					<div class="text-center">
 						<i class="material-icons" style="font-size:48px">assignment</i>
 					</div>
+					<a href="descarga.php" target="_blank" class="DownloadLink">O prueba descargandolo aquí</a>
 				</div>
 			</div>
 		</section>
@@ -192,6 +193,12 @@
 				<label for="" class="Form-label">Fecha de solicitud</label>
 				<div class="form-group">
 					<input type="date" class="form-control FormCredit-input" id="id" name="date" placeholder="Fecha de solicitud" required>
+				</div><br>
+				<label for="" class="Form-label">No olvides adjuntar</label>
+				<div class="form-group" style="text-align:left;">
+					<li>Tu cédula escaneada al 150<a href="" class="AttachLink"> (Aquí)</a></li>
+					<li>Tu firma escaneada<a href="" class="AttachLink"> (Aquí)</a></li>
+					<li>Tus comprobantes de pago<a href="" class="AttachLink"> (Aquí)</a></li>
 				</div><br>
 				<label for="" class="Form-label"><a href="politicas.php" target="_blank">Políticas y términos de uso y privacidad</a></label>
 				<div class="form-group">

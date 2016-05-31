@@ -43,7 +43,7 @@
 							<li class="MainMenu-item"><a href="credito.php" class="MainMenu-link">Crédito</a></li>
 							<li class="MainMenu-item"><a href="portafolioservicios.php" class="MainMenu-link">Portafolio de Servicios</a>
 							<li class="MainMenu-item"><a href="contactenos.php" class="MainMenu-link">Contáctenos</a></li>
-							<li ng-show="vm.isAuthenticated()" class="MainMenu-item"><a><span class="glyphicon glyphicon-user" onclick="showOptions()"></span></a>
+							<li ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()"><a><span class="glyphicon glyphicon-user"></span></a>
 								
 								<div id="Options" class="Options z-depth-1">
 									<div class="OptSelect">
@@ -68,11 +68,11 @@
 			<div class="container WelcomeDescContent">
 				<div class="row WelcomeDescription-container" style="text-align: center;">
 					<div class="col-md-3 thumbnail hvr-glow hvr-round-corners" style="text-align:center">
-						<h4 class="text-center WelcomeDescription-title"><strong>Titulo 1</strong></h4>
+						<h4 class="text-center WelcomeDescription-title"><strong>Nuestra plataforma</strong></h4>
 						<div class="WelcomeDescIcon-container">
-							<i class="material-icons" style="font-size:90px; font-weight:100">account_balance_wallet</i>
+							<i class="material-icons" style="font-size:90px; font-weight:100">computer</i>
 						</div>
-						<p class="WelcomeDescription-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi nobis tempore voluptatum. Iste nulla, corrupti, eum unde porro hic explicabo labore alias soluta, aliquam sint mollitia. Repellat ducimus, rem quasi.</p>
+						<p class="WelcomeDescription-text">El Outsourcing Proveer Soluciones a través de la presente plataforma, nos permite crear una cuenta de usuario con su respectiva contraseña, para de esta manera realizar solicitudes de crédito en línea; o en su defecto descargar el formulario y subirlo posteriormente.</p>
 					</div>
 					<div class="col-md-6" style="text-align:center">
 						<div class="thumbnail hvr-glow WelcomeDescSecond-container" style="padding-bottom:2em; border-bottom-left-radius:10px; border-bottom-right-radius:10px">
@@ -87,11 +87,12 @@
 						</div>
 					</div>
 					<div class="col-md-3 thumbnail hvr-glow hvr-round-corners" style="text-align:center">
-						<h4 class="text-center WelcomeDescription-title" style="margin-bottom:1em"><strong>Titulo 2</strong></h4>
+						<h4 class="text-center WelcomeDescription-title" style="margin-bottom:1em"><strong>La idea</strong></h4>
 						<div class="WelcomeDescIcon-container">
-							<span class="glyphicon glyphicon-usd" style="font-size:90px; font-weight:100"></span>
+							<i class="material-icons" style="font-size:90px; font-weight:100">lightbulb_outline</i>
+							<!-- <span class="glyphicon glyphicon-usd" style="font-size:90px; font-weight:100"></span> -->
 						</div>
-						<p class="WelcomeDescription-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil optio totam dolore, aliquam est rem consectetur, necessitatibus soluta aliquid dolor velit, quis? Quaerat, quasi nobis nostrum quod. Quibusdam dicta, nam.</p>
+						<p class="WelcomeDescription-text">De acuerdo al estudio de mercado que se realizó, descubrimos la dificultad a la que se enfretan los clientes al momento de solicitar un crédito, pues debido al tiempo que este trámite requiere surge la idea de crear un aplicativo el cual facilite el proceso de documentación.</p>
 					</div>
 				</div>
 			</div>
@@ -104,7 +105,8 @@
 							<h4 class="text-center WelcomeCreditReq-title"><strong>Entendiendo el crédito</strong></h4>
 							<p class="WelcomeCreditReq-text">El uso del crédito está integrado a la vida cotidiana; es vital usarlo prudentemente para establecer un historial de crédito sólido y mantener una buena salud financiera. Una vez que te decidas a usar el crédito, necesitarás entender qué tipo de crédito es el mejor para ti.</p>
 							<div class="WelcomeCreditReqIcon-container" style="text-align:center">
-								<span class="glyphicon glyphicon-gbp" style="font-size:35px"></span>
+								<!--<span class="glyphicon glyphicon-gbp" style="font-size:35px"></span>-->
+								<span class="glyphicon glyphicon-usd" style="font-size:35px"></span>
 							</div>
 						</div>
 					</div>
@@ -122,7 +124,7 @@
 								<i class="material-icons" style="font-size:48px">arrow_downward</i>
 							</div>
 							<div class="WelcomeCreditReqLink-container">
-								<a href="" class="WelcomeCreditReq-link btn btn-info">Descarga el formulario de solicitud</a>
+								<a href="descarga.php" class="WelcomeCreditReq-link btn btn-info">Descarga el formulario de solicitud</a>
 							</div>
 						</div>
 					</div>
@@ -131,7 +133,8 @@
 							<h4 class="text-center WelcomeCreditReq-title"><strong>Antes de solicitar un crédito</strong></h4>
 							<p class="WelcomeCreditReq-text">Requerir un préstamo en una entidad bancaria no sólo supone obtener determinada cantidad de dinero que luego se debe reponer sino que, además, conlleva ciertas responsabilidades y obligaciones. Antes de solicitar un crédito infórmate, lee antes de firmar y mantén al banco notificado.</p>
 							<div class="WelcomeCreditReqIcon-container" style="text-align:center">
-								<span class="glyphicon glyphicon-gbp" style="font-size:35px"></span>
+								<!--<span class="glyphicon glyphicon-gbp" style="font-size:35px"></span>-->
+								<span class="glyphicon glyphicon-usd" style="font-size:35px"></span>
 							</div>
 						</div>
 					</div>

@@ -430,6 +430,13 @@ div.WelcomeCreditReqLink-container>a.btn-info {
   }
 }
 
+@media screen and (max-width: 453px) {
+  section.WelcomeDescMajor-container>div.container>div.row>div.col-md-3 {
+    margin-left: 0.7em;
+    margin-right: 0.7em;
+  }
+}
+
 /**@media screen and (min-width: 992px) {
   section.WelcomeCreditReqMajor-container>div.container>div.row>div.WelcomeCreditReqCenter-container {
     margin-top: 6em;

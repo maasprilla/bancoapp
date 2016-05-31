@@ -114,6 +114,13 @@ div.jumbotron>p.PolicyHeader-text {
   padding-bottom: 3em;
 }
 
+.PolicySecond-title {
+  border-bottom: 1px solid black;
+  display: inline-block;
+  padding-bottom: 0.3em;
+  text-align: center;
+}
+
 .Footer {
     text-align: center;
     /**display: flex;**/
