@@ -41,16 +41,16 @@
 					<div class="navbar-collapse collapse MainMenu-listContainer">
 						<ul class="nav navbar-right MainMenu-list"><!-- navbar-nav -->
 							<li class="MainMenu-item"><a onclick="showForm()" class="MainMenu-link" style="cursor:pointer">Iniciar Sesión <i class="fa fa-caret-down" style="cursor:pointer"></i></a>
-								<form id="PanelLogin" role="form" class="FormSingUp-Container">
+								<form id="PanelLogin" role="form" class="FormSingUp-Container" action="./scriptphp/login/verificar.php" method="post">
 									<div class="FormTitle-container">
 										<h3 class="text-center FormTitle">Iniciar Sesión</h3>
 									</div>
 									<!--<form action="" role="form" class="SingUp-form">-->
 									<div class="form-group">
-										<input type="email" placeholder="Email" class="form-control" required="true">
+										<input type="email"  name="email" placeholder="Email" class="form-control" required="true">
 									</div>
 									<div class="form-group">
-										<input type="password" placeholder="Contraseña" class="form-control" required="true">
+										<input type="password" name="password" placeholder="Contraseña" class="form-control" required="true">
 									</div>
 									<div class="form-group">
 										<input type="submit" value="Login" class="btn btn-default">

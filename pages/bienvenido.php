@@ -47,7 +47,7 @@
 								
 								<div id="Options" class="Options z-depth-1">
 									<div class="OptSelect">
-										<a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#777">Cerrar Sesion</a>
+										<a  class="MainMenu-link MainMenu-linkLogOut"  href="../scriptphp/login/cerrar.php" style="color:#777">Cerrar Sesion</a>
 									</div>
 								</div>
 							</li>
