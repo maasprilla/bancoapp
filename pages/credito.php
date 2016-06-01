@@ -88,8 +88,15 @@ include '../base_datos/conexion.php';
 				<div class="form-group">
 					<select type="text" class="form-control" id="bank" placeholder="Banco" required>
 						<option value="" disabled selected>Banco</option>
-						<option value="1">AV Villas</option>
-						<option value="2">BBVA</option>
+						<?php
+								$bancos=mysql_query("select * from bancos")or die(mysql_error());
+								while ($fbancos=mysql_fetch_array($bancos)) {
+						?>
+								<option value="<?php echo $fbancos['id_banco'];?>"><?php echo $fbancos['nombre'];?></option>
+	     			<?php
+								}
+						?>
+						
 					</select>
 				</div>
 				<label for="" class="Form-label">¿Autorizo al banco?</label>
@@ -100,12 +107,14 @@ include '../base_datos/conexion.php';
 				<div class="form-group">
 					<select type="text" class="form-control" id="typecredit" placeholder="Tipo de crédito" required>
 						<option value="" disabled selected>Tipo de crédito</option>
-						<option value="1">Vivienda</option>
-						<option value="2">Estudio</option>
-						<option value="3">Libre inversión</option>
-						<option value="4">Crédito rotativo</option>
-						<option value="5">Leasing de vivienda</option>
-						<option value="6">Crédito microempresarial</option>
+						<?php
+								$tipocredito=mysql_query("select * from tipo_credito")or die(mysql_error());
+								while ($ftipocredito=mysql_fetch_array($tipocredito)) {
+						?>
+								<option value="<?php echo $ftipocredito['id_tipo_credito'];?>"><?php echo $ftipocredito['nombre'];?></option>
+	     				<?php
+								}
+						?>
 					</select>
 				</div>
 				<div class="form-group">
@@ -115,8 +124,14 @@ include '../base_datos/conexion.php';
 				<div class="form-group">
 					<select type="text" class="form-control" id="city" placeholder="Ciudad" required>
 						<option value="" disabled selected>Ciudad de domicilio</option>
-						<option value="1"></option>
-						<option value="2"></option>
+						<?php
+								$ciudades=mysql_query("select * from ciudades order by nombre asc")or die(mysql_error());
+								while ($fciudades=mysql_fetch_array($ciudades)) {
+						?>
+								<option value="<?php echo $fciudades['id_ciudad'].'-'.$fciudades['id_departamento'];?>"><?php echo $fciudades['nombre'];?></option>
+	     			<?php
+								}
+						?>
 					</select>
 				</div>
 				<div class="form-group">
@@ -168,10 +183,14 @@ include '../base_datos/conexion.php';
 				<div class="form-group">
 					<select type="text" class="form-control" id="status" placeholder="Estado civil" required>
 						<option value="" disabled selected>Estado civil</option>
-						<option value="1">Soltero (a)</option>
-						<option value="2">Casado (a)</option>
-						<option value="1">Unión libre</option>
-						<option value="1">Viudo (a)</option>
+						<?php
+								$estadocivil=mysql_query("select * from estadocivil")or die(mysql_error());
+								while ($festadocivil=mysql_fetch_array($estadocivil)) {
+						?>
+								<option value="<?php echo $festadocivil['id_estadocivil'];?>"><?php echo $festadocivil['nombre'];?></option>
+	     				<?php
+								}
+						?>
 					</select>
 				</div>
 				<label for="" class="Form-label">Descripción Actividad</label>
