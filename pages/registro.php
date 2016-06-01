@@ -84,10 +84,19 @@
 					<form action="../scriptphp/registrarusuario.php" method="post" role="form" class="FormRegisUsers">
 						<h2 class="text-center FormRegis-title">Registro De Usuarios</h2>
 						<div class="form-group">
-							<input type="text" class="form-control FormRegis-input" id="nombre" name="name" placeholder="Nombres" required>
+							<input type="text" class="form-control FormRegis-input" id="nombre1" name="name1" placeholder="primer nombre" required>
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control FormRegis-input" id="apellido" name="lastname" placeholder="Apellidos" required>
+							<input type="text" class="form-control FormRegis-input" id="nombre2" name="name2" placeholder="segundo nombre" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control FormRegis-input" id="apellido1" name="lastname1" placeholder="primer apellido" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control FormRegis-input" id="apellido2" name="lastname2" placeholder="segundo apellido" required>
+						</div>
+						<div class="form-group">
+							<input type="date" class="form-control FormRegis-input" id="id" name="fechanacimiento" placeholder="Fecha de Nacimiento" required>
 						</div>
 						<div class="form-group">
 							<!-- <label for="typeid"></label> -->
@@ -100,6 +109,9 @@
 						</div>
 						<div class="form-group">
 							<input type="text" class="form-control FormRegis-input" id="id" name="numerodocumento" placeholder="Número de documento" required>
+						</div>
+						<div class="form-group">
+							<input type="date" class="form-control FormRegis-input" id="id" name="fechaexpediciondni" placeholder="Fecha de Expedicion de documento" required>
 						</div>
 						<div class="form-group">
 							<input type="email" class="form-control FormRegis-input" id="email" name="email" placeholder="E-mail" required>
