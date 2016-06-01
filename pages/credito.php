@@ -1,3 +1,18 @@
+<?php
+session_start();
+include '../base_datos/conexion.php';
+
+
+
+	if(isset($_SESSION['Usuario'])){
+
+		$re=mysql_query("SELECT *, (TIMESTAMPDIFF(YEAR, fecha_nacimiento, CURDATE())) as edad FROM usuarios u where u.id_usuarios='".$_SESSION['Usuario']."'")or die(mysql_error());
+		$f=mysql_fetch_array($re);
+
+	}else{
+		header("Location: ../index.php?Error=Acceso denegado");
+	}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -105,42 +120,50 @@
 					</select>
 				</div>
 				<div class="form-group">
-					<select type="text" class="form-control" id="typeid" placeholder="Tipo de documento" required>
+					<select type="text" class="form-control" id="typeid" placeholder="Tipo de documento"  disabled="true"  required>
 						<option value="" disabled selected>Tipo de documento</option>
-						<option value="1">cédula de ciudadania</option>
-						<option value="2">cédula de extranjería</option>
+						<?php
+								$tipodocumento=mysql_query("select * from tipo_documentos")or die(mysql_error());
+								while ($ftipodocumento=mysql_fetch_array($tipodocumento)) {
+									if($ftipodocumento['id_tipo_documento']==$f['id_tipo_documento']){
+						?>
+								<option value="<?php echo $ftipodocumento['id_tipo_documento'];?>" disabled selected><?php echo $ftipodocumento['nombre'];?></option>
+	     			<?php
+									}
+								}
+						?>
 					</select>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="id" name="id" placeholder="Número de documento" required>
+					<input type="text" class="form-control FormCredit-input" id="id" name="id" placeholder="Número de documento" value="<?=$f['dni']?>" disabled="true" required>
 				</div>
 				<label for="" class="Form-label">Fecha de expedición</label>
 				<div class="form-group">
-					<input type="date" class="form-control FormCredit-input" id="id" name="date" placeholder="Fecha de expedición" required>
+					<input type="date" class="form-control FormCredit-input" id="id" name="date" placeholder="Fecha de expedición" value="<?=$f['fecha_expedicion']?>" disabled="true" required>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="nombre" name="name" placeholder="Primer nombre (*)" required>
+					<input type="text" class="form-control FormCredit-input" id="nombre" name="name" value="<?=$f['nombre1']?>" disabled="true" placeholder="Primer nombre (*)" required>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="segnombre" name="secondname" placeholder="Segundo nombre">
+					<input type="text" class="form-control FormCredit-input" id="segnombre" name="secondname" value="<?=$f['nombre2']?>" disabled="true" placeholder="Segundo nombre">
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="apellido" name="lastname" placeholder="Primer apellido (*)" required>
+					<input type="text" class="form-control FormCredit-input" id="apellido" name="lastname" value="<?=$f['apellido1']?>" disabled="true" placeholder="Primer apellido (*)" required>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="segapellido" name="secondlastname" placeholder="Segundo Apellido">
+					<input type="text" class="form-control FormCredit-input" id="segapellido" name="secondlastname" value="<?=$f['apellido2']?>" disabled="true" placeholder="Segundo Apellido">
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="age" name="age" placeholder="Edad" required>
+					<input type="text" class="form-control FormCredit-input" id="age" name="age" placeholder="Edad" value="<?=$f['edad']?>" disabled="true" required>
 				</div>
 				<div class="form-group">
-					<input type="tel" class="form-control FormCredit-input" id="phone" name="phone" placeholder="Teléfono" required>
+					<input type="tel" class="form-control FormCredit-input" id="phone" name="phone" placeholder="Teléfono" value="<?=$f['telefono']?>" disabled="true" required>
 				</div>
 				<div class="form-group">
-					<input type="email" class="form-control FormCredit-input" id="email" name="email" placeholder="E-mail" required>
+					<input type="email" class="form-control FormCredit-input" id="email" name="email" placeholder="E-mail" value="<?=$f['email']?>" disabled="true" required>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="adress" name="adress" placeholder="Dirección de residencia" required>
+					<input type="text" class="form-control FormCredit-input" id="adress" name="adress" placeholder="Dirección de residencia" value="<?=$f['direccion']?>" disabled="true" required>
 				</div>
 				<div class="form-group">
 					<select type="text" class="form-control" id="status" placeholder="Estado civil" required>

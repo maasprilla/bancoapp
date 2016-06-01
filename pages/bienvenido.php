@@ -1,3 +1,15 @@
+<?php
+session_start();
+include '../base_datos/conexion.php';
+
+	if(isset($_SESSION['Usuario'])){
+
+		$re=mysql_query("SELECT * FROM usuarios u where u.id_usuarios='".$_SESSION['Usuario']."'")or die(mysql_error());
+
+	}else{
+		header("Location: ../index.php?Error=Acceso denegado");
+	}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -44,7 +56,7 @@
 							<li class="MainMenu-item"><a href="portafolioservicios.php" class="MainMenu-link">Portafolio de Servicios</a>
 							<li class="MainMenu-item"><a href="contactenos.php" class="MainMenu-link">Contáctenos</a></li>
 							<li ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()"><a><span class="glyphicon glyphicon-user"></span></a>
-								
+
 								<div id="Options" class="Options z-depth-1">
 									<div class="OptSelect">
 										<a  class="MainMenu-link MainMenu-linkLogOut"  href="../scriptphp/login/cerrar.php" style="color:#777">Cerrar Sesion</a>
