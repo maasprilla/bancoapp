@@ -82,11 +82,11 @@ include '../base_datos/conexion.php';
 			</div>
 		</section>
 		<section class="FormCreditMajor-container">
-			<form action="" method="post" role="form" class="FormCreditUsers">
+			<form action="../scriptphp/registrarcredito.php" method="post" role="form" class="FormCreditUsers">
 				<h1 class="text-center FormCredit-title">Solicitud de crédito</h1>
 				<label for="" class="Form-label">Banco</label>
 				<div class="form-group">
-					<select type="text" class="form-control" id="bank" placeholder="Banco" required>
+					<select type="text" class="form-control" id="bank" name="bank" placeholder="Banco" required>
 						<option value="" disabled selected>Banco</option>
 						<?php
 								$bancos=mysql_query("select * from bancos")or die(mysql_error());
@@ -96,7 +96,7 @@ include '../base_datos/conexion.php';
 	     			<?php
 								}
 						?>
-						
+
 					</select>
 				</div>
 				<label for="" class="Form-label">¿Autorizo al banco?</label>
@@ -105,7 +105,7 @@ include '../base_datos/conexion.php';
 					<label class="radio-inline"><input type="radio" name="optradio" value="" required>No</label>
 				</div>
 				<div class="form-group">
-					<select type="text" class="form-control" id="typecredit" placeholder="Tipo de crédito" required>
+					<select type="text" class="form-control" id="typecredit" name="typecredit" placeholder="Tipo de crédito" required>
 						<option value="" disabled selected>Tipo de crédito</option>
 						<?php
 								$tipocredito=mysql_query("select * from tipo_credito")or die(mysql_error());
@@ -122,7 +122,7 @@ include '../base_datos/conexion.php';
 				</div><br>
 				<label for="" class="Form-label">Ciudad</label>
 				<div class="form-group">
-					<select type="text" class="form-control" id="city" placeholder="Ciudad" required>
+					<select type="text" class="form-control" id="city" name="city" placeholder="Ciudad" required>
 						<option value="" disabled selected>Ciudad de domicilio</option>
 						<?php
 								$ciudades=mysql_query("select * from ciudades order by nombre asc")or die(mysql_error());
@@ -135,7 +135,7 @@ include '../base_datos/conexion.php';
 					</select>
 				</div>
 				<div class="form-group">
-					<select type="text" class="form-control" id="typeid" placeholder="Tipo de documento"  disabled="true"  required>
+					<select type="text" class="form-control" id="typeid" name="typedocument" placeholder="Tipo de documento"  disabled="true"  required>
 						<option value="" disabled selected>Tipo de documento</option>
 						<?php
 								$tipodocumento=mysql_query("select * from tipo_documentos")or die(mysql_error());
@@ -150,11 +150,11 @@ include '../base_datos/conexion.php';
 					</select>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="id" name="id" placeholder="Número de documento" value="<?=$f['dni']?>" disabled="true" required>
+					<input type="text" class="form-control FormCredit-input" id="id" name="documentnumber" placeholder="Número de documento" value="<?=$f['dni']?>" disabled="true" required>
 				</div>
 				<label for="" class="Form-label">Fecha de expedición</label>
 				<div class="form-group">
-					<input type="date" class="form-control FormCredit-input" id="id" name="date" placeholder="Fecha de expedición" value="<?=$f['fecha_expedicion']?>" disabled="true" required>
+					<input type="date" class="form-control FormCredit-input" id="id" name="dateexpedition" placeholder="Fecha de expedición" value="<?=$f['fecha_expedicion']?>" disabled="true" required>
 				</div>
 				<div class="form-group">
 					<input type="text" class="form-control FormCredit-input" id="nombre" name="name" value="<?=$f['nombre1']?>" disabled="true" placeholder="Primer nombre (*)" required>
@@ -181,7 +181,7 @@ include '../base_datos/conexion.php';
 					<input type="text" class="form-control FormCredit-input" id="adress" name="adress" placeholder="Dirección de residencia" value="<?=$f['direccion']?>" disabled="true" required>
 				</div>
 				<div class="form-group">
-					<select type="text" class="form-control" id="status" placeholder="Estado civil" required>
+					<select type="text" class="form-control" id="status" name="maritalstatus" placeholder="Estado civil" required>
 						<option value="" disabled selected>Estado civil</option>
 						<?php
 								$estadocivil=mysql_query("select * from estadocivil")or die(mysql_error());
@@ -208,13 +208,16 @@ include '../base_datos/conexion.php';
 				</div>
 				<label for="" class="Form-label">Descripción Financiera</label>
 				<div class="form-group">
-					<select type="text" class="form-control" id="income" placeholder="Ingresos mensuales" required>
+					<select type="text" class="form-control" id="income" name="anualincome" placeholder="Ingresos mensuales" required>
 						<option value="" disabled selected>Ingresos mensuales</option>
-						<option value="1">< de $300.000</option>
-						<option value="2">Entre $300.000 y $689.454</option>
-						<option value="1">Entre $689.454 y $900.000</option>
-						<option value="1">Entre $900.000 y $1.200.000</option>
-						<option value="1">> de $1.200.000</option>
+						<?php
+								$anualincome=mysql_query("select * from descripcion_financiera")or die(mysql_error());
+								while ($fanualincome=mysql_fetch_array($anualincome)) {
+						?>
+								<option value="<?php echo $fanualincome['id_descripcion_financiera'];?>"><?php echo $fanualincome['nombre'];?></option>
+	     				<?php
+								}
+						?>
 					</select>
 				</div><br>
 				<label for="" class="Form-label">Descripción Patrimonial</label><br>
@@ -224,13 +227,13 @@ include '../base_datos/conexion.php';
 					<label class="radio-inline"><input type="radio" name="optradio" value="" required>No</label>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="use" name="use" placeholder="Uso" required>
+					<input type="text" class="form-control FormCredit-input" id="use" name="use" placeholder="Uso" >
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="age" name="age" placeholder="Marca" required>
+					<input type="text" class="form-control FormCredit-input" id="age" name="age" placeholder="Marca" >
 				</div>
 				<div class="form-group">
-					<input type="money" class="form-control FormCredit-input" id="age" name="age" placeholder="Valor comercial" required>
+					<input type="money" class="form-control FormCredit-input" id="age" name="age" placeholder="Valor comercial" >
 				</div><br>
 				<label for="" class="Form-label">Fecha de solicitud</label>
 				<div class="form-group">
