@@ -77,7 +77,7 @@ include '../base_datos/conexion.php';
 					<div class="text-center">
 						<i class="material-icons" style="font-size:48px">assignment</i>
 					</div>
-					<a href="descarga.php" target="_blank" class="DownloadLink">O prueba descargandolo aquí</a>
+					<!-- <a href="descarga.php" target="_blank" class="DownloadLink">O prueba descargandolo aquí</a> -->
 				</div>
 			</div>
 		</section>
@@ -239,11 +239,15 @@ include '../base_datos/conexion.php';
 				<div class="form-group">
 					<input type="date" class="form-control FormCredit-input" id="id" name="date" placeholder="Fecha de solicitud" required>
 				</div><br>
-				<label for="" class="Form-label">No olvides adjuntar</label>
+				<label for="" class="Form-label">No olvides escanear y adjuntar los siguientes documentos:</label>
 				<div class="form-group" style="text-align:left;">
-					<li>Tu cédula escaneada al 150<a href="" class="AttachLink"> (Aquí)</a></li>
-					<li>Tu firma escaneada<a href="" class="AttachLink"> (Aquí)</a></li>
+					<li>Tu cédula al 150<a href="" class="AttachLink"> (Aquí)</a></li>
+					<li>Tu firma<a href="" class="AttachLink"> (Aquí)</a></li>
 					<li>Tus comprobantes de pago<a href="" class="AttachLink"> (Aquí)</a></li>
+					<li>2 cartas personales<a href="" class="AttachLink"> (Aquí)</a></li>
+					<li>1 carta laboral<a href="" class="AttachLink"> (Aquí)</a></li>
+					<li>2 referencias personales<a href="" class="AttachLink"> (Aquí)</a></li>
+					<li>2 referencias comerciales<a href="" class="AttachLink"> (Aquí)</a></li>
 				</div><br>
 				<label for="" class="Form-label"><a href="politicas.php" target="_blank">Políticas y términos de uso y privacidad</a></label>
 				<div class="form-group">

@@ -84,17 +84,18 @@
 					<form action="../scriptphp/registrarusuario.php" method="post" role="form" class="FormRegisUsers">
 						<h2 class="text-center FormRegis-title">Registro De Usuarios</h2>
 						<div class="form-group">
-							<input type="text" class="form-control FormRegis-input" id="nombre1" name="name1" placeholder="primer nombre" required>
+							<input type="text" class="form-control FormRegis-input" id="nombre1" name="name1" placeholder="Primer nombre" required>
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control FormRegis-input" id="nombre2" name="name2" placeholder="segundo nombre" required>
+							<input type="text" class="form-control FormRegis-input" id="nombre2" name="name2" placeholder="Segundo nombre" required>
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control FormRegis-input" id="apellido1" name="lastname1" placeholder="primer apellido" required>
+							<input type="text" class="form-control FormRegis-input" id="apellido1" name="lastname1" placeholder="Primer apellido" required>
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control FormRegis-input" id="apellido2" name="lastname2" placeholder="segundo apellido" required>
+							<input type="text" class="form-control FormRegis-input" id="apellido2" name="lastname2" placeholder="Segundo apellido" required>
 						</div>
+						<label for="" class="Form-label">Fecha de nacimiento</label>
 						<div class="form-group">
 							<input type="date" class="form-control FormRegis-input" id="id" name="fechanacimiento" placeholder="Fecha de Nacimiento" required>
 						</div>
@@ -110,6 +111,7 @@
 						<div class="form-group">
 							<input type="text" class="form-control FormRegis-input" id="id" name="numerodocumento" placeholder="Número de documento" required>
 						</div>
+						<label for="" class="Form-label">Fecha de expedición</label>
 						<div class="form-group">
 							<input type="date" class="form-control FormRegis-input" id="id" name="fechaexpediciondni" placeholder="Fecha de Expedicion de documento" required>
 						</div>

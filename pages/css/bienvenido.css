@@ -437,8 +437,8 @@ div.WelcomeCreditReqLink-container>a.btn-info {
   }
 }
 
-/**@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
   section.WelcomeCreditReqMajor-container>div.container>div.row>div.WelcomeCreditReqCenter-container {
     margin-top: 6em;
   }
-}**/
+}

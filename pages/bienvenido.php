@@ -131,14 +131,14 @@ include '../base_datos/conexion.php';
 								<a href="credito.php" class="WelcomeCreditReq-link btn btn-info">Solicita tu crédito en línea</a>
 							</div>
 						</div>
-						<div class="thumbnail hvr-glow" style="width:100%">
+						<!-- <div class="thumbnail hvr-glow" style="width:100%">
 							<div class="DescriptionIcon-container hvr-hang">
 								<i class="material-icons" style="font-size:48px">arrow_downward</i>
 							</div>
 							<div class="WelcomeCreditReqLink-container">
 								<a href="descarga.php" class="WelcomeCreditReq-link btn btn-info">Descarga el formulario de solicitud</a>
 							</div>
-						</div>
+						</div> -->
 					</div>
 					<div class="col-md-4">
 						<div class="thumbnail hvr-glow hvr-round-corners">
