@@ -121,52 +121,28 @@
 		</section>
 		<section class="TeamMajor-container">
 			<div class="container TeamContainer">
-				<h2 class="text-center TeamMain-title">EQUIPO</h2>
+				<h2 class="text-center TeamMain-title">IMPACTO</h2>
 				<div class="row TeamInfo-container">
 					<div class="col-md-4">
 						<div class="thumbnail hvr-glow TeamContent">
-							<div class="Team-image-container hvr-underline-from-center">
-								<img src="../static/images/Team.png" alt="Equipo" class="Team-image hvr-round-corners" style="max-width:100%">
+							<div class="Team-image-container">
+								<img src="../static/images/expectations.jpg" alt="Equipo" class="Team-image hvr-round-corners" style="max-width:100%">
 							</div>
 							<p class="Producto-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque similique eum sunt temporibus in harum a ratione, modi deserunt recusandae. Quam quae voluptatum cupiditate est voluptate, quisquam laboriosam dolorum commodi..</p>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="thumbnail hvr-glow TeamContent">
-							<div class="Team-image-container hvr-underline-from-center">
-								<img src="../static/images/Team.png" alt="Equipo" class="Team-image hvr-round-corners" style="max-width:100%">
+							<div class="Team-image-container">
+								<img src="../static/images/impact.jpg" alt="Equipo" class="Team-image hvr-round-corners" style="max-width:100%">
 							</div>
 							<p class="Producto-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque similique eum sunt temporibus in harum a ratione, modi deserunt recusandae. Quam quae voluptatum cupiditate est voluptate, quisquam laboriosam dolorum commodi..</p>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="thumbnail hvr-glow TeamContent">
-							<div class="Team-image-container hvr-underline-from-center">
-								<img src="../static/images/Team.png" alt="Equipo" class="Team-image hvr-round-corners" style="max-width:100%">
-							</div>
-							<p class="Producto-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque similique eum sunt temporibus in harum a ratione, modi deserunt recusandae. Quam quae voluptatum cupiditate est voluptate, quisquam laboriosam dolorum commodi..</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="thumbnail hvr-glow TeamContent">
-							<div class="Team-image-container hvr-underline-from-center">
-								<img src="../static/images/Team.png" alt="Equipo" class="Team-image hvr-round-corners" style="max-width:100%">
-							</div>
-							<p class="Producto-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque similique eum sunt temporibus in harum a ratione, modi deserunt recusandae. Quam quae voluptatum cupiditate est voluptate, quisquam laboriosam dolorum commodi..</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="thumbnail hvr-glow TeamContent">
-							<div class="Team-image-container hvr-underline-from-center">
-								<img src="../static/images/Team.png" alt="Equipo" class="Team-image hvr-round-corners" style="max-width:100%">
-							</div>
-							<p class="Producto-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque similique eum sunt temporibus in harum a ratione, modi deserunt recusandae. Quam quae voluptatum cupiditate est voluptate, quisquam laboriosam dolorum commodi..</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="thumbnail hvr-glow TeamContent">
-							<div class="Team-image-container hvr-underline-from-center">
-								<img src="../static/images/Team.png" alt="Equipo" class="Team-image hvr-round-corners" style="max-width:100%">
+							<div class="Team-image-container">
+								<img src="../static/images/partner2.jpg" alt="Equipo" class="Team-image hvr-round-corners" style="max-width:100%">
 							</div>
 							<p class="Producto-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque similique eum sunt temporibus in harum a ratione, modi deserunt recusandae. Quam quae voluptatum cupiditate est voluptate, quisquam laboriosam dolorum commodi..</p>
 						</div>

@@ -122,27 +122,27 @@ ul.nav>li>a:hover {
   text-decoration: none;
 }
 
-.CreditListHeaderMajor-container {
+.UsersListHeaderMajor-container {
   padding: 1em 0;
   background: #fafafa;
   border-bottom: 1px solid #c8e6c9;
 }
 
-section.CreditListHeaderMajor-container>div.container>div.jumbotron {
+section.UsersListHeaderMajor-container>div.container>div.jumbotron {
   background: #fafafa;
   text-align: center;
   padding: 0;
 }
 
-.CreditListHeaderImage-container {
+.UsersListHeaderImage-container {
   display: inline-block;
 }
 
-div.jumbotron>p.CreditList-text {
+div.jumbotron>p.UsersList-text {
   font-size: 27px;
 }
 
-.CreditListTable-majorContainer {
+.UsersListTable-majorContainer {
   padding-top: 1.5em;
   padding-bottom: 2.3em;
   text-align: center;
@@ -150,14 +150,14 @@ div.jumbotron>p.CreditList-text {
   color: black;
 }
 
-.CreditListTable-mainTitle {
+.UsersListTable-mainTitle {
   margin-bottom: 1.3em;
   padding-bottom: 0.3em;
   border-bottom: 1px solid;
   display: inline-block;
 }
 
-.CreditListTable {
+.UsersListTable {
   margin-top: 3em;
   text-align: justify;
   background: snow;
@@ -328,76 +328,79 @@ div.jumbotron>p.CreditList-text {
 }
 
 @media screen and (max-width: 767px) {
-  div.jumbotron>p.CreditList-text {
+  div.jumbotron>p.UsersList-text {
     font-size: 21px;
   }
 }
 
 @media screen and (min-width: 901px) {
-  div.CreditListTable-Content {
+  div.UsersListTable-Content {
     margin: 0.5em 1em;
   }
 }
 
 @media screen and (max-width: 900px) {
-  div.CreditListTable-Content {
+  div.UsersListTable-Content {
     margin: 0.5em -0.5em;
   }
 }
 
 @media screen and (max-width: 900px) {
-  section.CreditListTable-majorContainer>table.CreditListTable, table.CreditListTable thead, table.CreditListTable tbody, table.CreditListTable th, table.CreditListTable td, table.CreditListTable tr {
+  section.UsersListTable-majorContainer>table.UsersListTable, table.UsersListTable thead, table.UsersListTable tbody, table.UsersListTable th, table.UsersListTable td, table.UsersListTable tr {
     display: block;
   }
-  table.CreditListTable thead tr {
+  table.UsersListTable thead tr {
     border: none;
     position: absolute;
     top: -9999px;
     /**bottom: -9999px;**/
   }
-  table.CreditListTable tr {
+  table.UsersListTable tr {
     border: 1px solid #ccc;
   }
-  table.CreditListTable td {
+  table.UsersListTable td {
     border: none;
     position: relative;
   }
-  table.CreditListTable td:before {
+  table.UsersListTable td:before {
     position: relative;
     font-weight: bold;
   }
-  table.CreditListTable td:nth-of-type(1):before {
-    content: "Banco: ";
+  table.UsersListTable td:nth-of-type(1):before {
+    content: "Nombre: ";
   }
-  table.CreditListTable td:nth-of-type(2):before {
-    content: "Tipo de crédito: ";
+  table.UsersListTable td:nth-of-type(2):before {
+    content: "Apellido: ";
   }
-  table.CreditListTable td:nth-of-type(3):before {
-    content: "Descripción: ";
+  table.UsersListTable td:nth-of-type(3):before {
+    content: "Teléfono: ";
   }
-  table.CreditListTable td:nth-of-type(4):before {
-    content: "Fecha de expedición: ";
+  table.UsersListTable td:nth-of-type(4):before {
+    content: "Dirección: ";
   }
-  table.CreditListTable td:nth-of-type(5):before {
-    display: none;
+  table.UsersListTable td:nth-of-type(5):before {
+    content: "Email: ";
+  }
+  table.UsersListTable td:nth-of-type(5):before {
+    content: "Ciudad: ";
   }
 }
 
 @media screen and (max-width: 470px) {
-  .CreditListTable {
+  .UsersListTable {
     font-size: 13px;
   }
-  .CreditListTable-mainTitle {
+  .UsersListTable-mainTitle {
     font-size: 25px;
   }
 }
 
 @media screen and (min-width: 901px) {
-  table.CreditListTable thead {
+  table.UsersListTable thead {
     color: black;
     background: #c5e1a5;
   }
-  table.CreditListTable th {
+  table.UsersListTable th {
     text-align: center;
   }
   table.UsersListTable td {

@@ -242,7 +242,7 @@ include '../base_datos/conexion.php';
 				<label for="" class="Form-label">No olvides escanear y adjuntar los siguientes documentos:</label>
 				<div class="form-group" style="text-align:left;">
 					<li>Tu cédula al 150<a href="" class="AttachLink"> (Aquí)</a></li>
-					<li>Tu firma<a href="" class="AttachLink"> (Aquí)</a></li>
+					<li>Tu firma y tu huella<a href="" class="AttachLink"> (Aquí)</a></li>
 					<li>Tus comprobantes de pago<a href="" class="AttachLink"> (Aquí)</a></li>
 					<li>2 cartas personales<a href="" class="AttachLink"> (Aquí)</a></li>
 					<li>1 carta laboral<a href="" class="AttachLink"> (Aquí)</a></li>

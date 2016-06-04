@@ -153,13 +153,17 @@ ul.nav>li>a:hover {
   display: inline-block;
 }
 
-.TeamMain-title:hover {
+/**.TeamMain-title:hover {
   color: black;
   border-bottom: 1px solid black;
-}
+}**/
 
 .Producto-text {
   color: black;
+}
+
+.Team-image-container {
+  margin-bottom: 1em;
 }
 
 .Footer {
