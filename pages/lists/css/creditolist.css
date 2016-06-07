@@ -370,15 +370,18 @@ div.jumbotron>p.CreditList-text {
     content: "Banco: ";
   }
   table.CreditListTable td:nth-of-type(2):before {
-    content: "Tipo de crédito: ";
+    content: "Cliente: ";
   }
   table.CreditListTable td:nth-of-type(3):before {
-    content: "Descripción: ";
+    content: "Tipo de crédito: ";
   }
   table.CreditListTable td:nth-of-type(4):before {
-    content: "Fecha de expedición: ";
+    content: "Descripción: ";
   }
   table.CreditListTable td:nth-of-type(5):before {
+    content: "Fecha de expedición: ";
+  }
+  table.CreditListTable td:nth-of-type(6):before {
     display: none;
   }
 }

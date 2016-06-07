@@ -53,6 +53,7 @@ include '../base_datos/conexion.php';
 						<ul class="nav navbar-right MainMenu-list">
 							<li class="MainMenu-item"><a href="../index.php" class="MainMenu-link">Inicio</a></li>
 							<li class="MainMenu-item"><a href="credito.php" class="MainMenu-link">Crédito</a></li>
+							<li class="MainMenu-item"><a href="./lists/creditoslist.php" class="MainMenu-link">Lista de Crédito</a></li>
 							<li class="MainMenu-item"><a href="portafolioservicios.php" class="MainMenu-link">Portafolio de Servicios</a>
 							<li class="MainMenu-item"><a href="contactenos.php" class="MainMenu-link">Contáctenos</a></li>
 							<li ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()"><a><span class="glyphicon glyphicon-user"></span></a>

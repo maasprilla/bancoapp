@@ -1,3 +1,34 @@
+<?php
+include '../../base_datos/conexion.php';
+session_start();
+
+
+
+
+	if(isset($_SESSION['Usuario'])){
+
+		$re=mysql_query("
+		SELECT cr.id_creditos, cr.descripcion as credito_descripcion, b.nombre as banco, u.nombre1 as usuario_nombre1, u.nombre2 as usuario_nombre2,
+		u.apellido1 as usuario_apellido1, u.apellido2 as usuario_apellido2, u.dni as usuario_dni, u.fecha_expedicion as fecha_expedicion_cedula,
+		u.email as usuario_email, u.telefono as usuario_telefono, u.direccion as usuario_direccion, u.fecha_nacimiento as usuario_fecha_nacimiento,
+		tc.nombre as tipo_credito, ec.nombre as estadocivil, df.nombre as descripcion_financiera, da.nombre as descripcion_actividad, ci.nombre as ciudad
+		FROM creditos cr join usuarios_has_creditos uc join usuarios u join tipo_credito tc
+		join bancos b join estadocivil ec join descripcion_financiera df join descripcion_actividad da join ciudades ci
+		where u.id_usuarios=uc.id_usuarios
+		and cr.id_creditos=uc.id_creditos
+		and cr.id_tipo_credito=tc.id_tipo_credito
+		and b.id_banco=cr.id_banco
+		and cr.id_estadocivil=ec.id_estadocivil
+		and cr.id_descripcion_financiera=df.id_descripcion_financiera
+		and da.id_descripcion_actividad=cr.id_descripcion_actividad
+		and ci.id_ciudad=cr.id_ciudad
+		and ci.id_departamento=cr.id_departamento
+		")or die(mysql_error());
+
+	}else{
+		header("Location: ../index.php?Error=Acceso denegado");
+	}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -76,6 +107,7 @@
 						<thead>
 							<tr>
 								<th>Banco</th>
+								<th>Cliente</th>
 								<th>Tipo de crédito</th>
 								<th>Descripción</th>
 								<th>Fecha de expedición</th>
@@ -83,18 +115,47 @@
 							</tr>
 						</thead>
 						<tbody>
+							<?php
+							while ($f=mysql_fetch_array($re)) {
+							?>
 							<tr>
-								<td data-title="'Banco'"></td>
-								<td data-title="'Tipo de crédito'"></td>
-								<td data-title="'Descripción'"></td>
+								<td data-title="'Banco'"><?php echo $f['banco'];?></td>
+								<td data-title="'Cliente'"><?php echo $f['usuario_nombre1'].' '.$f['usuario_nombre2'].' '.$f['usuario_apellido1'].' '.$f['usuario_apellido2'];?></td>
+								<td data-title="'Tipo de crédito'"><?php echo $f['tipo_credito'];?></td>
+								<td data-title="'Descripción'"><?php echo $f['credito_descripcion'];?></td>
 								<td data-title="'Fecha de expedición'"></td>
-								<td data-title="'Ver más'"><a href="" class="TableLink">Ver más</a></td>
+								<td data-title="'Ver más'"><button href="" onclick="loadDataModel(this);" class="TableLink" data-toggle="modal" data-target="#modalCredit" data-banco="<?php echo $f['banco'];?>">Ver más</button></td>
 							</tr>
+							<?php
+									}
+							?>
 						</tbody>
 					</table>
 				</div>
 			</div>
 		</section>
+
+<!-- Modal -->
+<div class="modal fade" id="modalCredit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+				<div class="form-group">
+					<label>Banco</label>
+					<input type="text" class="form-control FormCredit-input " id="banco" disabled="true" placeholder="Banco" required>
+				</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 	</div>
 	<footer class="Footer">
 		<div class="container FooterSect-container">
@@ -132,6 +193,7 @@
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</footer>
 	<script src="../../static/js/bootstrap.min.js"></script>
@@ -141,5 +203,6 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script src="http://code.jquery.com/jquery-1.12.2.min.js"></script>
 	<script src="../../static/js/desplegablelogout.js"></script>
+	<script src="./js/showmodalcredits.js"></script>
 </body>
 </html>

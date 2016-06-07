@@ -60,7 +60,7 @@ include '../base_datos/conexion.php';
 							<li ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()"><a><span class="glyphicon glyphicon-user"></span></a>
 								<div id="Options" class="Options z-depth-1">
 									<div class="OptSelect">
-										<a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#777">Cerrar Sesion</a>
+										<a  class="MainMenu-link MainMenu-linkLogOut"  href="../scriptphp/login/cerrar.php" style="color:#777">Cerrar Sesion</a>
 									</div>
 								</div>
 							</li>
@@ -195,16 +195,14 @@ include '../base_datos/conexion.php';
 				</div>
 				<label for="" class="Form-label">Descripción Actividad</label>
 				<div class="form-group">
-					<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="optradio" value="" required>Empleado (a)</label>
-					<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="optradio" value="" required>Pensionado (a)</label>
-					<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="optradio" value="" required>Independiente</label>
-					<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="optradio" value="" required>Madre comunitaria</label>
-					<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="optradio" value="" required>Educador (a)</label>
-					<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="optradio" value="" required>Empleado con salario integral</label>
-					<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="optradio" value="" required>Ejercito Nacional</label>
-					<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="optradio" value="" required>Armada Nacional</label>
-					<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="optradio" value="" required>Fuerza Aerea</label>
-					<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="optradio" value="" required>Policia Nacional</label>
+					<?php
+							$descripcionactividad=mysql_query("select * from descripcion_actividad")or die(mysql_error());
+							while ($fdescripcionactividad=mysql_fetch_array($descripcionactividad)) {
+					?>
+							<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="descripcionactividad" value="<?php echo $fdescripcionactividad['id_descripcion_actividad'];?>" required><?php echo $fdescripcionactividad['nombre'];?></label>
+						<?php
+							}
+					?>
 				</div>
 				<label for="" class="Form-label">Descripción Financiera</label>
 				<div class="form-group">
