@@ -5,6 +5,7 @@ include '../base_datos/conexion.php';
 	if(isset($_SESSION['Usuario'])){
 
 		$re=mysql_query("SELECT * FROM usuarios u where u.id_usuarios='".$_SESSION['Usuario']."'")or die(mysql_error());
+		$f=mysql_fetch_array($re);
 
 	}else{
 		header("Location: ../index.php?Error=Acceso denegado");
@@ -56,7 +57,7 @@ include '../base_datos/conexion.php';
 							<li class="MainMenu-item"><a href="./lists/creditoslist.php" class="MainMenu-link">Lista de Crédito</a></li>
 							<li class="MainMenu-item"><a href="portafolioservicios.php" class="MainMenu-link">Portafolio de Servicios</a>
 							<li class="MainMenu-item"><a href="contactenos.php" class="MainMenu-link">Contáctenos</a></li>
-							<li ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()"><a><span class="glyphicon glyphicon-user"></span></a>
+							<li ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()"><a><span class="glyphicon glyphicon-user"><?php echo $f['nombre1'].' '.$f['nombre2'] ?></span></a>
 
 								<div id="Options" class="Options z-depth-1">
 									<div class="OptSelect">

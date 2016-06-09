@@ -55,9 +55,10 @@ include '../base_datos/conexion.php';
 					<div class="navbar-collapse collapse MainMenu-listContainer">
 						<ul class="nav navbar-right MainMenu-list">
 							<li class="MainMenu-item"><a href="bienvenido.php" class="MainMenu-link">Inicio</a></li>
+							<li class="MainMenu-item"><a href="./lists/creditoslist.php" class="MainMenu-link">Lista de Crédito</a></li>
 							<li class="MainMenu-item"><a href="portafolioservicios.php" class="MainMenu-link">Portafolio de Servicios</a>
 							<li class="MainMenu-item"><a href="contactenos.php" class="MainMenu-link">Contáctenos</a></li>
-							<li ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()"><a><span class="glyphicon glyphicon-user"></span></a>
+							<li ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()"><a><span class="glyphicon glyphicon-user"><?php echo $f['nombre1'].' '.$f['nombre2'] ?></span></a>
 								<div id="Options" class="Options z-depth-1">
 									<div class="OptSelect">
 										<a  class="MainMenu-link MainMenu-linkLogOut"  href="../scriptphp/login/cerrar.php" style="color:#777">Cerrar Sesion</a>
@@ -82,7 +83,7 @@ include '../base_datos/conexion.php';
 			</div>
 		</section>
 		<section class="FormCreditMajor-container">
-			<form action="../scriptphp/registrarcredito.php" method="post" role="form" class="FormCreditUsers">
+			<form action="../scriptphp/registrarcredito.php" method="post" role="form" class="FormCreditUsers" onsubmit="return validacion()">
 				<h1 class="text-center FormCredit-title">Solicitud de crédito</h1>
 				<label for="" class="Form-label">Banco</label>
 				<div class="form-group">
@@ -101,8 +102,8 @@ include '../base_datos/conexion.php';
 				</div>
 				<label for="" class="Form-label">¿Autorizo al banco?</label>
 				<div class="form-group">
-					<label class="radio-inline"><input type="radio" name="optradio" value="" required>Si</label>
-					<label class="radio-inline"><input type="radio" name="optradio" value="" required>No</label>
+					<label class="radio-inline"><input type="radio" id="autorizacionbancosi" name="autorizacionbanco" value="si" required>Si</label>
+					<label class="radio-inline"><input type="radio" id="autorizacionbancono" name="autorizacionbanco" value="no" required>No</label>
 				</div>
 				<div class="form-group">
 					<select type="text" class="form-control" id="typecredit" name="typecredit" placeholder="Tipo de crédito" required>
@@ -249,8 +250,8 @@ include '../base_datos/conexion.php';
 				</div><br>
 				<label for="" class="Form-label"><a href="politicas.php" target="_blank">Políticas y términos de uso y privacidad</a></label>
 				<div class="form-group">
-					<label class="radio-inline"><input type="radio" name="optradio" value="" required>Acepto</label>
-					<label class="radio-inline"><input type="radio" name="optradio" value="" required>No acepto</label>
+					<label class="radio-inline"><input type="radio" id="terminosycondicionessi" name="terminosycondiciones" value="" required>Acepto</label>
+					<label class="radio-inline"><input type="radio" id="terminosycondicionesno" name="terminosycondiciones" value="" required>No acepto</label>
 				</div><br>
 				<div class="form-group ButtonCredit-container">
 					<input type="submit" value="ENVIAR" class="btn btn-default CreditButton">
@@ -303,5 +304,22 @@ include '../base_datos/conexion.php';
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script src="http://code.jquery.com/jquery-1.12.2.min.js"></script>
 	<script src="../static/js/desplegablelogout.js"></script>
+	<script >
+	function validacion() {
+		var autorizacionbanco = document.getElementById("autorizacionbancosi");
+		if(autorizacionbanco.checked == false){
+			alert("por favor acepte la autorizacion del banco");
+			return false;
+		}
+		var terminosycondiciones = document.getElementById("terminosycondicionessi");
+		if(terminosycondiciones.checked == false){
+			alert("por favor acepte los terminos y condiciones");
+			return false;
+		}
+
+
+
+	}
+	</script>
 </body>
 </html>

@@ -54,20 +54,20 @@
 					<div class="text-center">
 						<i class="material-icons" style="font-size:48px">verified_user</i>
 					</div>
-					
+
 				</div>
 			</div>
 		</section>
 		<section class="FormSingUpMajor-container">
-			<form id="PanelLogin" role="form" class="FormSingUp-Container">
+			<form id="PanelLogin" role="form" class="FormSingUp-Container" action="../scriptphp/login/verificar.php" method="post">
 				<div class="FormTitle-container">
 					<h2 class="text-center FormTitle">Iniciar Sesión</h2>
 				</div>
 				<div class="form-group">
-					<input type="email" placeholder="Email" class="form-control FormLogin-input" required="true">
+					<input type="email" name="email" placeholder="Email" class="form-control FormLogin-input" required="true">
 				</div>
 				<div class="form-group">
-					<input type="password" placeholder="Contraseña" class="form-control FormLogin-input" required="true">
+					<input type="password" name="password" placeholder="Contraseña" class="form-control FormLogin-input" required="true">
 				</div>
 				<div class="form-group">
 					<input type="submit" value="Login" class="btn btn-default LoginButton">

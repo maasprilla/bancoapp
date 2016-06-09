@@ -24,6 +24,7 @@ session_start();
 		and ci.id_ciudad=cr.id_ciudad
 		and ci.id_departamento=cr.id_departamento
 		")or die(mysql_error());
+		$f=mysql_fetch_array($re);
 
 	}else{
 		header("Location: ../index.php?Error=Acceso denegado");
@@ -71,12 +72,11 @@ session_start();
 					<div class="navbar-collapse collapse MainMenu-listContainer">
 						<ul class="nav navbar-right MainMenu-list">
 							<li class="MainMenu-item"><a href="../bienvenido.php" class="MainMenu-link">Inicio</a></li>
-							<li class="MainMenu-item"><a href="usuarioslist.php" class="MainMenu-link">Lista de usuarios</a></li>
-							<li ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()"><a><span class="glyphicon glyphicon-user"></span></a>
+							<li ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()"><a><span class="glyphicon glyphicon-user"><?php echo $f['usuario_nombre1'].' '.$f['usuario_nombre2'] ?></span></a>
 
 								<div id="Options" class="Options z-depth-1">
 									<div class="OptSelect">
-										<a  class="MainMenu-link MainMenu-linkLogOut"  href="../scriptphp/login/cerrar.php" style="color:#777">Cerrar Sesion</a>
+										<a  class="MainMenu-link MainMenu-linkLogOut"  href="../../scriptphp/login/cerrar.php" style="color:#777">Cerrar Sesion</a>
 									</div>
 								</div>
 							</li>
