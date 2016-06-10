@@ -179,7 +179,7 @@ if(isset($_SESSION['Usuario'])){
 							<div class="Team-image-container">
 								<img src="../static/images/expectations.jpg" alt="Equipo" class="Team-image hvr-round-corners" style="max-width:100%">
 							</div>
-							<p class="Producto-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque similique eum sunt temporibus in harum a ratione, modi deserunt recusandae. Quam quae voluptatum cupiditate est voluptate, quisquam laboriosam dolorum commodi..</p>
+							<p class="Producto-text">Las expectativas a futuro, serán convertirnos en un puente necesario entre las entidades financieras y el cliente, logrando así un posicionamiento importante y ser reconocidos a nivel mundial como pioneros en este uso de la tecnología, al crear un medio rápido y eficaz para la consolidación de créditos y vinculación de clientes. Prestaremos nuestros servicios de analistas y asesores, quienes estarán capacitados para prestar el mejor servicio y ofrecer satisfacción a la comunidad en general.</p>
 						</div>
 					</div>
 					<div class="col-md-4">
@@ -187,7 +187,7 @@ if(isset($_SESSION['Usuario'])){
 							<div class="Team-image-container">
 								<img src="../static/images/impact.jpg" alt="Equipo" class="Team-image hvr-round-corners" style="max-width:100%">
 							</div>
-							<p class="Producto-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque similique eum sunt temporibus in harum a ratione, modi deserunt recusandae. Quam quae voluptatum cupiditate est voluptate, quisquam laboriosam dolorum commodi..</p>
+							<p class="Producto-text">El mundo de las aplicaciones móviles y tecnologías en general, es demasiado extenso y ha sido usado para que las personas naturales y jurídicas puedan exponer sus ideas, promocionar sus empresas o servicios, en esta ocasión usamos estas tecnologías para optimizar el vínculo entre las personas que tiene la necesidad de un servicio y las entidades que pueden suplir dichas necesidades. Incursionamos con esta propuesta, aprovechando al máximo la fuerza que tienen las tecnologías en la vida cotidiana de cada una de las personas, y el resultado es este aplicativo que les hará la vida más fácil a los usuarios.</p>
 						</div>
 					</div>
 					<div class="col-md-4">
@@ -195,7 +195,7 @@ if(isset($_SESSION['Usuario'])){
 							<div class="Team-image-container">
 								<img src="../static/images/partner2.jpg" alt="Equipo" class="Team-image hvr-round-corners" style="max-width:100%">
 							</div>
-							<p class="Producto-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque similique eum sunt temporibus in harum a ratione, modi deserunt recusandae. Quam quae voluptatum cupiditate est voluptate, quisquam laboriosam dolorum commodi..</p>
+							<p class="Producto-text">La manera como conseguiremos una consolidación con las entidades financieras, es que conozcan los beneficios de un aplicativo como este; el OUTSOURCING PROVEER SOLUCIONES está diseñado para generar satisfacción tanto para las entidades financieras que usen nuestros servicios, como para los usuarios; ofrecemos confianza y credibilidad a la hora de prestar los servicios financieros y de intermediación, dando como resultado un trabajo impecable y satisfactorio.</p>
 						</div>
 					</div>
 				</div>

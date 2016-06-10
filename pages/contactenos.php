@@ -114,7 +114,7 @@ if(isset($_SESSION['Usuario'])){
 			<!-- <div class="container ContactContainer">
 				<div class="row ContactFormInfo-container">
 					<div class="col-md-12 Formulario-container"> -->
-						<form action="mail.php" method="POST" enctype="multipart/form-data" class="FormularioContacto">
+						<form action="../scriptphp/mail.php" method="POST" enctype="multipart/form-data" class="FormularioContacto">
 
 								<div class="form-group">
 									<label class="Form-nameLabel" for="">Nombres:</label>

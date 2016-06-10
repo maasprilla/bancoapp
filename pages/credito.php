@@ -225,7 +225,7 @@ include '../base_datos/conexion.php';
 					</select>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="neighbor" name="neighbor" placeholder="Barrio" >
+					<input type="text" class="form-control FormCredit-input" id="neighbor" name="neighbor" placeholder="Barrio" value="<?=$f['barrio']?>" disabled="true" required>
 				</div>
 				<div class="form-group">
 					<select type="text" class="form-control" id="house" name="house" placeholder="Tipo de vivienda" required>
@@ -340,8 +340,8 @@ include '../base_datos/conexion.php';
 						<option value="" disabled selected>Actividad económica empresa o negocio</option>
 						<option>Sector privado</option>
 						<option>Sector público</option>
-    						<option>Fuerzas armadas</option>
-    						<option>Agricultura/Ganadería</option>
+    				<option>Fuerzas armadas</option>
+    				<option>Agricultura/Ganadería</option>
 					</select>
 				</div>
 				<label for="" class="Form-label">Descripción Financiera</label>
@@ -364,8 +364,8 @@ include '../base_datos/conexion.php';
 						<option value="" disabled selected>Tipo de inmueble</option>
 						<option>Casa</option>
 						<option>Apartamento</option>
-    						<option>Bodega</option>
-    						<option>Oficina</option>
+    				<option>Bodega</option>
+    				<option>Oficina</option>
 						<option>Local</option>
 						<option>Consultoría</option>
 						<option>Lote</option>
@@ -376,12 +376,25 @@ include '../base_datos/conexion.php';
 				</div>
 				<div class="form-group">
 					<select type="text" class="form-control" id="city" name="city" placeholder="Ciudad" required>
-						<option value="" disabled selected>Ciudad de domicilio</option>
+						<option value="" disabled selected>Ciudad</option>
 						<?php
 								$ciudades=mysql_query("select * from ciudades order by nombre asc")or die(mysql_error());
 								while ($fciudades=mysql_fetch_array($ciudades)) {
 						?>
 								<option value="<?php echo $fciudades['id_ciudad'].'-'.$fciudades['id_departamento'];?>"><?php echo $fciudades['nombre'];?></option>
+	     			<?php
+								}
+						?>
+					</select>
+				</div>
+				<div class="form-group">
+					<select type="text" class="form-control" id="dpto" name="dpto" placeholder="Departamento de empresa o negocio" required>
+						<option value="" disabled selected>Departamento</option>
+						<?php
+								$departamento=mysql_query("select * from departamentos order by nombre asc")or die(mysql_error());
+								while ($fdepartamentos=mysql_fetch_array($departamentos)) {
+						?>
+								<option value="<?php echo $fdepartamento['id_departamento'].'-'.$fdepartamentos['id_paises'];?>"><?php echo $fdepartamentos['nombre'];?></option>
 	     			<?php
 								}
 						?>

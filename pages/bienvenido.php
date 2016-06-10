@@ -54,7 +54,7 @@ include '../base_datos/conexion.php';
 							<li class="MainMenu-item"><a href="./lists/creditoslist.php" class="MainMenu-link">Lista de Crédito</a></li>
 							<li class="MainMenu-item"><a href="portafolioservicios.php" class="MainMenu-link">Portafolio de Servicios</a>
 							<li class="MainMenu-item"><a href="contactenos.php" class="MainMenu-link">Contáctenos</a></li>
-							<li id="OptionsDesktop" ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()" style="cursor:pointer"><a><span class="glyphicon glyphicon-user"> <?php echo $f['nombre1'].' '.$f['nombre2'] ?></span></a>
+							<li id="OptionsDesktop" ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()" style="cursor:pointer;"><a><span class="glyphicon glyphicon-user"> <?php echo $f['nombre1'].' '.$f['nombre2'] ?></span></a>
 
 								<div id="Options" class="Options z-depth-1">
 									<div class="OptSelect">
