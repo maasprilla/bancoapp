@@ -5,9 +5,6 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>BancoApp</title>
 	<link rel="stylesheet" href="css/iniciarsesion.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -38,6 +35,7 @@
 					</div>
 					<div class="navbar-collapse collapse MainMenu-listContainer">
 						<ul class="nav navbar-right MainMenu-list">
+							<li class="MainMenu-item"><a href="../index.php" class="MainMenu-link">Inicio</a></li>
 							<li class="MainMenu-item"><a href="registro.php" class="MainMenu-link">Registrarse</a></li>
 							<li class="MainMenu-item"><a href="portafolioservicios.php" class="MainMenu-link">Portafolio de Servicios</a></li>
 							<li class="MainMenu-item"><a href="contactenos.php" class="MainMenu-link">Contáctenos</a></li>

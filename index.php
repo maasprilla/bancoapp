@@ -5,9 +5,6 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>BancoApp</title>
 	<link rel="stylesheet" href="static/css/estilos.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -36,16 +33,15 @@
 							<img alt="Brand" src="static/images/logo4.png" class="Logo-image" style="width:100%">
 						</a>
 						</div>
-						
+
 					</div>
 					<div class="navbar-collapse collapse MainMenu-listContainer">
 						<ul class="nav navbar-right MainMenu-list"><!-- navbar-nav -->
-							<li class="MainMenu-item"><a onclick="showForm()" class="MainMenu-link" style="cursor:pointer">Iniciar Sesión <i class="fa fa-caret-down" style="cursor:pointer"></i></a>
+							<!-- <li class="MainMenu-item"><a onclick="showForm()" class="MainMenu-link" style="cursor:pointer">Iniciar Sesión <i class="fa fa-caret-down" style="cursor:pointer"></i></a>
 								<form id="PanelLogin" role="form" class="FormSingUp-Container" action="./scriptphp/login/verificar.php" method="post">
 									<div class="FormTitle-container">
 										<h3 class="text-center FormTitle">Iniciar Sesión</h3>
 									</div>
-									<!--<form action="" role="form" class="SingUp-form">-->
 									<div class="form-group">
 										<input type="email"  name="email" placeholder="Email" class="form-control" required="true">
 									</div>
@@ -55,9 +51,9 @@
 									<div class="form-group">
 										<input type="submit" value="Login" class="btn btn-default">
 									</div>
-									<!--</form>-->
 								</form>
-							</li>
+							</li> -->
+							<li class="MainMenu-item"><a href="pages/iniciarsesion.php"	class="MainMenu-link" style="cursor:pointer">Iniciar Sesión</a></li>
 							<li class="MainMenu-item"><a href="pages/registro.php" class="MainMenu-link">Registrarse</a></li>
 							<li class="MainMenu-item"><a href="pages/portafolioservicios.php" class="MainMenu-link">Portafolio de Servicios</a></li>
 							<li class="MainMenu-item"><a href="pages/contactenos.php" class="MainMenu-link">Contáctenos</a></li>

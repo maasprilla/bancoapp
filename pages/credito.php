@@ -20,9 +20,6 @@ include '../base_datos/conexion.php';
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>BancoApp</title>
 	<link rel="stylesheet" href="css/credito.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -58,13 +55,28 @@ include '../base_datos/conexion.php';
 							<li class="MainMenu-item"><a href="./lists/creditoslist.php" class="MainMenu-link">Lista de Crédito</a></li>
 							<li class="MainMenu-item"><a href="portafolioservicios.php" class="MainMenu-link">Portafolio de Servicios</a>
 							<li class="MainMenu-item"><a href="contactenos.php" class="MainMenu-link">Contáctenos</a></li>
-							<li ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()"><a><span class="glyphicon glyphicon-user"><?php echo $f['nombre1'].' '.$f['nombre2'] ?></span></a>
+							<?php
+									if(isset($_SESSION['Usuario'])!=null){
+							?>
+							<li id="OptionsDesktop" class="MainMenu-item" onclick="showOptions()" style="cursor:pointer"><a><span class="glyphicon glyphicon-user"> <?php echo $f['nombre1'].' '.$f['nombre2'] ?></span></a>
+
 								<div id="Options" class="Options z-depth-1">
 									<div class="OptSelect">
 										<a  class="MainMenu-link MainMenu-linkLogOut"  href="../scriptphp/login/cerrar.php" style="color:#777">Cerrar Sesion</a>
 									</div>
 								</div>
 							</li>
+							<?php
+									}
+							?>
+							<?php
+									if(isset($_SESSION['Usuario'])!=null){
+							?>
+							<li id="OptionsMobile" class="MainMenu-item" style="cursor:pointer"><a><span class="glyphicon glyphicon-user"> <?php echo $f['nombre1'].' '.$f['nombre2'] ?></span></a></li>
+							<li id="OptionsMobile"class="MainMenu-item" style="cursor:pointer"><a  class="MainMenu-link MainMenu-linkLogOut"  href="../scriptphp/login/cerrar.php" style="color:#777">Cerrar Sesion</a></li>
+							<?php
+									}
+							?>
 						</ul>
 					</div>
 				</div>
@@ -118,6 +130,13 @@ include '../base_datos/conexion.php';
 						?>
 					</select>
 				</div>
+				<br>
+				<label for="" class="Form-label">Garantía ofrecida</label>
+				<div class="form-group">
+					<label class="checkbox-inline"><input type="checkbox" name="" value="" required>Firma codeudor</label>
+					<label class="checkbox-inline"><input type="checkbox" name="" value="" required>Hipotecaria</label>
+					<label class="checkbox-inline"><input type="checkbox" name="" value="" required>Certificado fondo nacional de garantias</label>
+				</div>
 				<div class="form-group">
 					<textarea class="form-control textarea FormDescriptionCredit-text" id="comments" name="comments" placeholder="Descripción" rows="3" required style="resize:none"></textarea>
 				</div><br>
@@ -130,6 +149,20 @@ include '../base_datos/conexion.php';
 								while ($fciudades=mysql_fetch_array($ciudades)) {
 						?>
 								<option value="<?php echo $fciudades['id_ciudad'].'-'.$fciudades['id_departamento'];?>"><?php echo $fciudades['nombre'];?></option>
+	     			<?php
+								}
+						?>
+					</select>
+				</div>
+				<label for="" class="Form-label">Departamento</label>
+				<div class="form-group">
+					<select type="text" class="form-control" id="dpto" name="dpto" placeholder="Departamento" required>
+						<option value="" disabled selected>Departamento</option>
+						<?php
+								$departamento=mysql_query("select * from departamentos order by nombre asc")or die(mysql_error());
+								while ($fdepartamentos=mysql_fetch_array($departamentos)) {
+						?>
+								<option value="<?php echo $fdepartamento['id_departamento'].'-'.$fdepartamentos['id_paises'];?>"><?php echo $fdepartamentos['nombre'];?></option>
 	     			<?php
 								}
 						?>
@@ -176,10 +209,32 @@ include '../base_datos/conexion.php';
 					<input type="tel" class="form-control FormCredit-input" id="phone" name="phone" placeholder="Teléfono" value="<?=$f['telefono']?>" disabled="true" required>
 				</div>
 				<div class="form-group">
+					<input type="tel" class="form-control FormCredit-input" id="celphone" name="celphone" placeholder="Celular" value="<?=$f['celular']?>" disabled="true" required>
+				</div>
+				<div class="form-group">
 					<input type="email" class="form-control FormCredit-input" id="email" name="email" placeholder="E-mail" value="<?=$f['email']?>" disabled="true" required>
 				</div>
 				<div class="form-group">
 					<input type="text" class="form-control FormCredit-input" id="adress" name="adress" placeholder="Dirección de residencia" value="<?=$f['direccion']?>" disabled="true" required>
+				</div>
+				<div class="form-group">
+					<select type="text" class="form-control" id="zone" name="zone" placeholder="Zona residencial" required>
+						<option value="" disabled selected>Zona residencial</option>
+						<option>Rural</option>
+						<option>Urbana</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="neighbor" name="neighbor" placeholder="Barrio" >
+				</div>
+				<div class="form-group">
+					<select type="text" class="form-control" id="house" name="house" placeholder="Tipo de vivienda" required>
+						<option value="" disabled selected>Tipo de vivienda</option>
+						<option>Propia con hipoteca</option>
+						<option>Propia sin hipoteca</option>
+    				<option>Familiar</option>
+    				<option>Arrendada</option>
+					</select>
 				</div>
 				<div class="form-group">
 					<select type="text" class="form-control" id="status" name="maritalstatus" placeholder="Estado civil" required>
@@ -194,42 +249,170 @@ include '../base_datos/conexion.php';
 						?>
 					</select>
 				</div>
-				<label for="" class="Form-label">Descripción Actividad</label>
+				<div class="form-group">
+					<select type="text" class="form-control" id="peopleincharge" name="peopleincharge" placeholder="Número de personas a cargo" required>
+						<option value="" disabled selected>Número de personas a cargo</option>
+						<option>0</option>
+						<option>1</option>
+    				<option>2</option>
+    				<option>3</option>
+    				<option>4</option>
+						<option>4 o más</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select type="text" class="form-control" id="studies" name="studies" placeholder="Último nivel de estudios terminados" required>
+						<option value="" disabled selected>Último nivel de estudios terminados</option>
+						<option>Primaria</option>
+						<option>Secundaria</option>
+    				<option>Universitaria</option>
+    				<option>Postgrado</option>
+    				<option>Técnico</option>
+						<option>Ninguno</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="Duties" name="Duties" placeholder="Profesión, ocupación u oficio" >
+				</div>
+				<label for="" class="Form-label">Actividad Económica</label>
 				<div class="form-group">
 					<?php
 							$descripcionactividad=mysql_query("select * from descripcion_actividad")or die(mysql_error());
 							while ($fdescripcionactividad=mysql_fetch_array($descripcionactividad)) {
 					?>
 							<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="descripcionactividad" value="<?php echo $fdescripcionactividad['id_descripcion_actividad'];?>" required><?php echo $fdescripcionactividad['nombre'];?></label>
+							<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="descripcionactividad" value="<?php echo $fdescripcionactividad['id_descripcion_actividad'];?>" required><?php echo $fdescripcionactividad['nombre'];?>Empleado</label>
+							<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="descripcionactividad" value="<?php echo $fdescripcionactividad['id_descripcion_actividad'];?>" required><?php echo $fdescripcionactividad['nombre'];?>Independiente</label>
+							<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="descripcionactividad" value="<?php echo $fdescripcionactividad['id_descripcion_actividad'];?>" required><?php echo $fdescripcionactividad['nombre'];?>Pensionado</label>
+							<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="descripcionactividad" value="<?php echo $fdescripcionactividad['id_descripcion_actividad'];?>" required><?php echo $fdescripcionactividad['nombre'];?>Rentista de capital</label>
+							<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="descripcionactividad" value="<?php echo $fdescripcionactividad['id_descripcion_actividad'];?>" required><?php echo $fdescripcionactividad['nombre'];?>Transportador</label>
+							<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="descripcionactividad" value="<?php echo $fdescripcionactividad['id_descripcion_actividad'];?>" required><?php echo $fdescripcionactividad['nombre'];?>Hogar</label>
+							<label class="radio text-justify" style="padding-left:3em"><input type="radio" name="descripcionactividad" value="<?php echo $fdescripcionactividad['id_descripcion_actividad'];?>" required><?php echo $fdescripcionactividad['nombre'];?>Estudiante</label>
 						<?php
 							}
 					?>
 				</div>
-				<label for="" class="Form-label">Descripción Financiera</label>
 				<div class="form-group">
-					<select type="text" class="form-control" id="income" name="anualincome" placeholder="Ingresos mensuales" required>
-						<option value="" disabled selected>Ingresos mensuales</option>
+					<textarea class="form-control textarea FormDescriptionCredit-text" id="comments" name="comments" placeholder="Describa su cargo, fecha de ingreso y tipo de contrato" rows="3" required style="resize:none"></textarea>
+				</div><br>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="org" name="org" placeholder="Nombre empresa o negocio" >
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="nitorg" name="nitorg" placeholder="Nit empresa o negocio donde desarrolla actividad" >
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="adressorg" name="adressorg" placeholder="Dirección empresa o negocio donde desarrolla actividad" >
+				</div>
+				<label for="" class="Form-label">Ciudad de empresa o negocio</label>
+				<div class="form-group">
+					<select type="text" class="form-control" id="city" name="city" placeholder="Ciudad de empresa o negocio" required>
+						<option value="" disabled selected>Ciudad de domicilio</option>
 						<?php
-								$anualincome=mysql_query("select * from descripcion_financiera")or die(mysql_error());
-								while ($fanualincome=mysql_fetch_array($anualincome)) {
+								$ciudades=mysql_query("select * from ciudades order by nombre asc")or die(mysql_error());
+								while ($fciudades=mysql_fetch_array($ciudades)) {
 						?>
-								<option value="<?php echo $fanualincome['id_descripcion_financiera'];?>"><?php echo $fanualincome['nombre'];?></option>
-	     				<?php
+								<option value="<?php echo $fciudades['id_ciudad'].'-'.$fciudades['id_departamento'];?>"><?php echo $fciudades['nombre'];?></option>
+	     			<?php
 								}
 						?>
 					</select>
+				</div>
+				<label for="" class="Form-label">Departamento de empresa o negocio</label>
+				<div class="form-group">
+					<select type="text" class="form-control" id="dpto" name="dpto" placeholder="Departamento de empresa o negocio" required>
+						<option value="" disabled selected>Departamento</option>
+						<?php
+								$departamento=mysql_query("select * from departamentos order by nombre asc")or die(mysql_error());
+								while ($fdepartamentos=mysql_fetch_array($departamentos)) {
+						?>
+								<option value="<?php echo $fdepartamento['id_departamento'].'-'.$fdepartamentos['id_paises'];?>"><?php echo $fdepartamentos['nombre'];?></option>
+	     			<?php
+								}
+						?>
+					</select>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="telorg" name="telorg" placeholder="Teléfono empresa o negocio" >
+				</div>
+				<div class="form-group">
+					<select type="text" class="form-control" id="economicactivity" name="economicactivity" placeholder="Actividad económica empresa o negocio" required>
+						<option value="" disabled selected>Actividad económica empresa o negocio</option>
+						<option>Sector privado</option>
+						<option>Sector público</option>
+    						<option>Fuerzas armadas</option>
+    						<option>Agricultura/Ganadería</option>
+					</select>
+				</div>
+				<label for="" class="Form-label">Descripción Financiera</label>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="ingresosmen" name="ingresosmen" placeholder="Total ingresos mensuales $" >
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="egresosmen" name="egresosmen" placeholder="Total egresos mensuales $" >
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="tact" name="tact" placeholder="Total activos (vehículos, inmuebles, maquinaria, etc)">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="tpas" name="tpas" placeholder="Total pasivos (deudas financieras, otras deudas, etc)">
 				</div><br>
-				<label for="" class="Form-label">Descripción Patrimonial</label><br>
-				<label for="" class="Form-label">¿Vehículos?</label>
+				<label for="" class="Form-label">Descripción Patrimonial</label><br><br>
+				<label for="" class="Form-label">Relación de terrenos y bienes raíces</label>
 				<div class="form-group">
-					<label class="radio-inline"><input type="radio" name="optradio" value="" required>Si</label>
-					<label class="radio-inline"><input type="radio" name="optradio" value="" required>No</label>
+					<select type="text" class="form-control" id="tipoinmueble" name="tipoinmueble" placeholder="Tipo de inmueble" required>
+						<option value="" disabled selected>Tipo de inmueble</option>
+						<option>Casa</option>
+						<option>Apartamento</option>
+    						<option>Bodega</option>
+    						<option>Oficina</option>
+						<option>Local</option>
+						<option>Consultoría</option>
+						<option>Lote</option>
+					</select>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="use" name="use" placeholder="Uso" >
+					<input type="text" class="form-control FormCredit-input" id="dir" name="dir" placeholder="Dirección" >
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="age" name="age" placeholder="Marca" >
+					<select type="text" class="form-control" id="city" name="city" placeholder="Ciudad" required>
+						<option value="" disabled selected>Ciudad de domicilio</option>
+						<?php
+								$ciudades=mysql_query("select * from ciudades order by nombre asc")or die(mysql_error());
+								while ($fciudades=mysql_fetch_array($ciudades)) {
+						?>
+								<option value="<?php echo $fciudades['id_ciudad'].'-'.$fciudades['id_departamento'];?>"><?php echo $fciudades['nombre'];?></option>
+	     			<?php
+								}
+						?>
+					</select>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="use" name="use" placeholder="Valor comercial" ><br>
+				</div>
+				<label for="" class="Form-label">Relación maquinaria, equipo y bienes vehículo</label>
+				<div class="form-group">
+					<select type="text" class="form-control" id="veh" name="veh" placeholder="Clase" required>
+						<option value="" disabled selected>Tipo de inmueble</option>
+						<option>Maquinaria</option>
+						<option>Equipo</option>
+    				<option>Automovil</option>
+    				<option>Campero</option>
+						<option>Camioneta</option>
+						<option>Moto</option>
+						<option>Taxi</option>
+						<option>De carga</option>
+						<option>De pasajeros</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="model" name="model" placeholder="Modelo" >
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="brand" name="brand" placeholder="Marca" >
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="brand" name="brand" placeholder="Placa" >
 				</div>
 				<div class="form-group">
 					<input type="money" class="form-control FormCredit-input" id="age" name="age" placeholder="Valor comercial" >
@@ -237,16 +420,93 @@ include '../base_datos/conexion.php';
 				<label for="" class="Form-label">Fecha de solicitud</label>
 				<div class="form-group">
 					<input type="date" class="form-control FormCredit-input" id="id" name="date" placeholder="Fecha de solicitud" required>
+				</div><br><br>
+				<label for="" class="Form-label">Referencias</label><br><br>
+				<label for="" class="Form-label">Referencia familiar</label>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="model" name="model" placeholder="Nombres y apellidos" >
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="brand" name="brand" placeholder="Parentesco">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="brand" name="brand" placeholder="Teléfono">
+				</div>
+				<div class="form-group">
+					<input type="money" class="form-control FormCredit-input" id="age" name="age" placeholder="Dirección">
+				</div>
+				<label for="" class="Form-label">Ciudad</label>
+				<div class="form-group">
+					<select type="text" class="form-control" id="city" name="city" placeholder="Ciudad" required>
+						<option value="" disabled selected>Ciudad de domicilio</option>
+						<?php
+								$ciudades=mysql_query("select * from ciudades order by nombre asc")or die(mysql_error());
+								while ($fciudades=mysql_fetch_array($ciudades)) {
+						?>
+								<option value="<?php echo $fciudades['id_ciudad'].'-'.$fciudades['id_departamento'];?>"><?php echo $fciudades['nombre'];?></option>
+	     			<?php
+								}
+						?>
+					</select>
+				</div>
+				<label for="" class="Form-label">Departamento</label>
+				<div class="form-group">
+					<select type="text" class="form-control" id="dpto" name="dpto" placeholder="Departamento" required>
+						<option value="" disabled selected>Departamento</option>
+						<?php
+								$departamento=mysql_query("select * from departamentos order by nombre asc")or die(mysql_error());
+								while ($fdepartamentos=mysql_fetch_array($departamentos)) {
+						?>
+								<option value="<?php echo $fdepartamento['id_departamento'].'-'.$fdepartamentos['id_paises'];?>"><?php echo $fdepartamentos['nombre'];?></option>
+	     			<?php
+								}
+						?>
+					</select>
 				</div><br>
+				<label for="" class="Form-label">Referencia personal</label>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="model" name="model" placeholder="Nombres y apellidos" >
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control FormCredit-input" id="brand" name="brand" placeholder="Teléfono">
+				</div>
+				<div class="form-group">
+					<input type="money" class="form-control FormCredit-input" id="age" name="age" placeholder="Dirección">
+				</div>
+				<label for="" class="Form-label">Ciudad</label>
+				<div class="form-group">
+					<select type="text" class="form-control" id="city" name="city" placeholder="Ciudad" required>
+						<option value="" disabled selected>Ciudad de domicilio</option>
+						<?php
+								$ciudades=mysql_query("select * from ciudades order by nombre asc")or die(mysql_error());
+								while ($fciudades=mysql_fetch_array($ciudades)) {
+						?>
+								<option value="<?php echo $fciudades['id_ciudad'].'-'.$fciudades['id_departamento'];?>"><?php echo $fciudades['nombre'];?></option>
+	     			<?php
+								}
+						?>
+					</select>
+				</div>
+				<label for="" class="Form-label">Departamento</label>
+				<div class="form-group">
+					<select type="text" class="form-control" id="dpto" name="dpto" placeholder="Departamento" required>
+						<option value="" disabled selected>Departamento</option>
+						<?php
+								$departamento=mysql_query("select * from departamentos order by nombre asc")or die(mysql_error());
+								while ($fdepartamentos=mysql_fetch_array($departamentos)) {
+						?>
+								<option value="<?php echo $fdepartamento['id_departamento'].'-'.$fdepartamentos['id_paises'];?>"><?php echo $fdepartamentos['nombre'];?></option>
+	     			<?php
+								}
+						?>
+					</select>
+				</div><br><br>
 				<label for="" class="Form-label">No olvides escanear y adjuntar los siguientes documentos:</label>
 				<div class="form-group" style="text-align:left;">
 					<li>Tu cédula al 150<a href="" class="AttachLink"> (Aquí)</a></li>
-					<li>Tu firma y tu huella<a href="" class="AttachLink"> (Aquí)</a></li>
+					<li>Tu firma<a href="" class="AttachLink"> (Aquí)</a></li>
 					<li>Tus comprobantes de pago<a href="" class="AttachLink"> (Aquí)</a></li>
-					<li>2 cartas personales<a href="" class="AttachLink"> (Aquí)</a></li>
 					<li>1 carta laboral<a href="" class="AttachLink"> (Aquí)</a></li>
-					<li>2 referencias personales<a href="" class="AttachLink"> (Aquí)</a></li>
-					<li>2 referencias comerciales<a href="" class="AttachLink"> (Aquí)</a></li>
 				</div><br>
 				<label for="" class="Form-label"><a href="politicas.php" target="_blank">Políticas y términos de uso y privacidad</a></label>
 				<div class="form-group">

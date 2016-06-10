@@ -351,6 +351,9 @@ textarea.FormDescriptionCredit-text:hover {
         -webkit-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
     }
+    #OptionsMobile {
+      display: none;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -381,6 +384,9 @@ textarea.FormDescriptionCredit-text:hover {
     div.LogoMajor-container>a.navbar-brand {
       max-width: 114px;
       margin-top: -14px;
+    }
+    #OptionsDesktop {
+      display: none;
     }
 }
 

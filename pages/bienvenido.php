@@ -18,9 +18,6 @@ include '../base_datos/conexion.php';
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>BancoApp</title>
 	<link rel="stylesheet" href="css/bienvenido.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -52,12 +49,12 @@ include '../base_datos/conexion.php';
 					</div>
 					<div class="navbar-collapse collapse MainMenu-listContainer">
 						<ul class="nav navbar-right MainMenu-list">
-							<li class="MainMenu-item"><a href="../index.php" class="MainMenu-link">Inicio</a></li>
+							<li class="MainMenu-item"><a href="bienvenido.php" class="MainMenu-link">Inicio</a></li>
 							<li class="MainMenu-item"><a href="credito.php" class="MainMenu-link">Crédito</a></li>
 							<li class="MainMenu-item"><a href="./lists/creditoslist.php" class="MainMenu-link">Lista de Crédito</a></li>
 							<li class="MainMenu-item"><a href="portafolioservicios.php" class="MainMenu-link">Portafolio de Servicios</a>
 							<li class="MainMenu-item"><a href="contactenos.php" class="MainMenu-link">Contáctenos</a></li>
-							<li ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()"><a><span class="glyphicon glyphicon-user"><?php echo $f['nombre1'].' '.$f['nombre2'] ?></span></a>
+							<li id="OptionsDesktop" ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()" style="cursor:pointer"><a><span class="glyphicon glyphicon-user"> <?php echo $f['nombre1'].' '.$f['nombre2'] ?></span></a>
 
 								<div id="Options" class="Options z-depth-1">
 									<div class="OptSelect">
@@ -65,6 +62,8 @@ include '../base_datos/conexion.php';
 									</div>
 								</div>
 							</li>
+							<li id="OptionsMobile" class="MainMenu-item" style="cursor:pointer"><a><span class="glyphicon glyphicon-user"> <?php echo $f['nombre1'].' '.$f['nombre2'] ?></span></a></li>
+							<li id="OptionsMobile"class="MainMenu-item" style="cursor:pointer"><a  class="MainMenu-link MainMenu-linkLogOut"  href="../scriptphp/login/cerrar.php" style="color:#777">Cerrar Sesion</a></li>
 						</ul>
 					</div>
 				</div>

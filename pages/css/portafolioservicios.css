@@ -94,6 +94,34 @@ ul.nav>li>a:hover {
     font-weight: 900;
 }
 
+.Options {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  background: #fafafa;
+  right: 0em;
+  display: none;
+  border-top: 1px solid #e7e7e7;
+  border-right: 1px solid #e7e7e7;
+  border-left: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -moz-border-bottom-right-radius: 10px;
+  -moz-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+}
+
+.OptSelect {
+  width: 15em;
+  padding: 1em;
+}
+
+.MainMenu-linkLogOut:hover {
+  text-decoration: none;
+}
+
 .WhoTitle {
   margin-bottom: 1em;
   /**border-bottom: 1px solid white;**/
@@ -297,6 +325,9 @@ ul.nav>li>a:hover {
         -webkit-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
     }
+    #OptionsMobile {
+      display: none;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -327,6 +358,9 @@ ul.nav>li>a:hover {
     div.LogoMajor-container>a.navbar-brand {
       max-width: 114px;
       margin-top: -14px;
+    }
+    #OptionsDesktop {
+      display: none;
     }
 }
 

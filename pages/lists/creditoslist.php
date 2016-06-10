@@ -37,9 +37,6 @@ session_start();
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>BancoApp</title>
 	<link rel="stylesheet" href="css/creditolist.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -72,7 +69,8 @@ session_start();
 					<div class="navbar-collapse collapse MainMenu-listContainer">
 						<ul class="nav navbar-right MainMenu-list">
 							<li class="MainMenu-item"><a href="../bienvenido.php" class="MainMenu-link">Inicio</a></li>
-							<li ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()"><a><span class="glyphicon glyphicon-user"><?php echo $f['usuario_nombre1'].' '.$f['usuario_nombre2'] ?></span></a>
+							<li class="MainMenu-item"><a href="usuarioslist.php" class="MainMenu-link">Listado de usuarios</a></li>
+							<li ng-show="vm.isAuthenticated()" class="MainMenu-item" onclick="showOptions()" style="cursor:pointer"><a><span class="glyphicon glyphicon-user"> <?php echo $f['usuario_nombre1'].' '.$f['usuario_nombre2'] ?></span></a>
 
 								<div id="Options" class="Options z-depth-1">
 									<div class="OptSelect">

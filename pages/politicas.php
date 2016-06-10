@@ -1,3 +1,16 @@
+<?php
+session_start();
+include '../base_datos/conexion.php';
+
+if(isset($_SESSION['Usuario'])){
+
+	$re=mysql_query("SELECT * FROM usuarios u where u.id_usuarios='".$_SESSION['Usuario']."'")or die(mysql_error());
+	$f=mysql_fetch_array($re);
+
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,9 +18,6 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>BancoApp</title>
 	<link rel="stylesheet" href="css/politicas.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -39,9 +49,45 @@
 					</div>
 					<div class="navbar-collapse collapse MainMenu-listContainer">
 						<ul class="nav navbar-right MainMenu-list">
+
+							<?php
+									if(isset($_SESSION['Usuario'])==null){
+							?>
 							<li class="MainMenu-item"><a href="../index.php" class="MainMenu-link">Inicio</a></li>
+							<?php
+									}
+							?>
+							<?php
+									if(isset($_SESSION['Usuario'])!=null){
+							?>
+							<li class="MainMenu-item"><a href="bienvenido.php" class="MainMenu-link">Inicio</a></li>
+							<?php
+									}
+							?>
 							<li class="MainMenu-item"><a href="portafolioservicios.php" class="MainMenu-link">Portafolio de Servicios</a>
 							<li class="MainMenu-item"><a href="contactenos.php" class="MainMenu-link">Contáctenos</a></li>
+							<?php
+									if(isset($_SESSION['Usuario'])!=null){
+							?>
+							<li id="OptionsDesktop" class="MainMenu-item" onclick="showOptions()" style="cursor:pointer"><a><span class="glyphicon glyphicon-user"> <?php echo $f['nombre1'].' '.$f['nombre2'] ?></span></a>
+
+								<div id="Options" class="Options z-depth-1">
+									<div class="OptSelect">
+										<a  class="MainMenu-link MainMenu-linkLogOut"  href="../scriptphp/login/cerrar.php" style="color:#777">Cerrar Sesion</a>
+									</div>
+								</div>
+							</li>
+							<?php
+									}
+							?>
+							<?php
+									if(isset($_SESSION['Usuario'])!=null){
+							?>
+							<li id="OptionsMobile" class="MainMenu-item" style="cursor:pointer"><a><span class="glyphicon glyphicon-user"> <?php echo $f['nombre1'].' '.$f['nombre2'] ?></span></a></li>
+							<li id="OptionsMobile"class="MainMenu-item" style="cursor:pointer"><a  class="MainMenu-link MainMenu-linkLogOut"  href="../scriptphp/login/cerrar.php" style="color:#777">Cerrar Sesion</a></li>
+							<?php
+									}
+							?>
 						</ul>
 					</div>
 				</div>
@@ -87,7 +133,19 @@
 						<br>
 						<li class="PolicyText">Estos datos no serán usados con fines judiciales o investigativos.</li>
 						<br>
-						<li class="PolicyText">En cuanto al registro de usuarios, es indispensable que la información o documentación suministrada sea verídica de lo contrario se procederá a eliminar y bloquear al usuario.</li>
+						<li class="PolicyText">En cuanto al registro de usuarios, es indispensable que la información o documentación suministrada sea verídica de lo contrario se procederá a eliminar y bloquear al usuario.</li><br><br>
+						<h4 class="text-left" style="font-weight:bold">A considerar:</h4>
+						<li class="PolicyText">Para realizar visitas y verificaciones comerciales con el fin de comprobar la información y documentación suministrada.</li>
+						<li class="PolicyText">Para destruir todos los documentos entregados, en caso de que la presente solicitud no sea aceptada por el banco.</li>
+						<li class="PolicyText">Para otorgar el crédito por un menor valor al solicitado, teniendo en cuenta el análisis de crédito que realice la entidad.</li>
+						<li class="PolicyText">Para tomar las medidas que considere necesarias y que las normas legales los exijan, en caso de que el solicitante reúna las características de las personas públicamente expuestas.</li><br>
+						<h4 class="text-left" style="font-weight:bold">AUTORIZACIÓN PARA CONSULTA Y REPORTE A LAS CENTRALES DE RIESGO:</h4>
+						<p>Autorizo de manera expresa e irrevocable al Outsourcing proveer soluciones S.A, a quien represente sus derechos o a sus  sucesores a cualquier título a:</p>
+						<ol>1. Reportar, procesar, solicitar y divulgar a cualquier operador de base de datos e información financiera, crediticia, comercial, de servicios y proveniente de terceros países, toda la información referente a mi comportamiento como cliente de las entidades financieras, de conformidad con los reglamentos a los cuales se sujeten las entidades antes mencionadas y la normatividad vigente sobre base de datos.</ol>
+						<ol>2. Consultar ante cualquier operador de base de datos e información financiera, crediticia, comercial, de servicios y proveniente de terceros países mi endeudamiento directo o indirecto con las entidades financieras del país así como la información disponible sobre el cumplimiento o manejo dado a mis compromisos y obligaciones cono dicho sector.</ol>
+						<ol>3. Conservar, tanto en el Outsourcing proveer soluciones S.A, en quien represente sus derechos o en sus sucesores a cualquier título como en los operadores de base de datos en información financiera, crediticia, comercial, de servicios, y proveniente de terceros países, con las debidas actualizaciones y durante el periodo necesario señalado en las disposiciones generales o en su reglamentos, la información indicada en los numerales 1 y 2 anteriores.</ol>
+						<ol>4. Suministrar a cualquier operador de base de datos e información financiera, crediticia, com3ercialm, de servicios y provenientes de terceros países información requerida a mi solicitud de crédito así como datos atinentes a mis relaciones comerciales, financieras en general socioeconómicas que haya entregado o que consten en registros públicos, base de datos públicos o documentos públicos.</ol>
+						<ol>5. Suministrar toda la información consultada y almacenada por proveer soluciones S.A a las matrices, filiales o subordinadas de la matriz y demás entidades vinculadas al mismo grupo, así como a terceros para fines comerciales. Declaro que conozco y acepto que los reporte negativos que las entidades financieras realice a cualquier operador de base de datos e información financiera, crediticia, comercial, de servicios y proveniente de terceros países pueden generar consecuencias negativas en acceso al crédito y demás servicios financieros, así como conozco el derecho que me asiste de solicitar rectificación y actualización de la información cuando eta no corresponda con la realidad crediticia, sin que tal derecho implique revocatoria alguna de las autorizaciones que se confieren a proveer soluciones. </ol>
 					</div>
 					<div class="col-md-2"></div>
 				</div>
@@ -138,5 +196,6 @@
 	<script src="../static/js/jquery-1.12.2.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script src="http://code.jquery.com/jquery-1.12.2.min.js"></script>
+	<script src="../static/js/desplegablelogout.js"></script>
 </body>
 </html>

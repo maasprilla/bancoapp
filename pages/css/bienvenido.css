@@ -367,6 +367,9 @@ div.WelcomeCreditReqLink-container>a.btn-info {
         -webkit-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
     }
+    #OptionsMobile {
+      display: none;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -397,6 +400,9 @@ div.WelcomeCreditReqLink-container>a.btn-info {
     div.LogoMajor-container>a.navbar-brand {
       max-width: 114px;
       margin-top: -14px;
+    }
+    #OptionsDesktop {
+      display: none;
     }
 }
 
