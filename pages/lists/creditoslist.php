@@ -104,11 +104,11 @@ session_start();
 					<table class="table CreditListTable">
 						<thead>
 							<tr>
-								<th>Banco</th>
 								<th>Cliente</th>
+								<th>Cédula</th>
+								<th>Banco</th>
 								<th>Tipo de crédito</th>
-								<th>Descripción</th>
-								<th>Fecha de expedición</th>
+								<th>Fecha de solicitud</th>
 								<th></th>
 							</tr>
 						</thead>
@@ -117,11 +117,11 @@ session_start();
 							while ($f=mysql_fetch_array($re)) {
 							?>
 							<tr>
-								<td data-title="'Banco'"><?php echo $f['banco'];?></td>
 								<td data-title="'Cliente'"><?php echo $f['usuario_nombre1'].' '.$f['usuario_nombre2'].' '.$f['usuario_apellido1'].' '.$f['usuario_apellido2'];?></td>
+								<td data-title="'Cliente'"><?php echo $f['usuario_dni'].' '.$f['usuario_dni'].' '.$f['usuario_dni'].' '.$f['usuario_dni'];?></td>
+								<td data-title="'Banco'"><?php echo $f['banco'];?></td>
 								<td data-title="'Tipo de crédito'"><?php echo $f['tipo_credito'];?></td>
-								<td data-title="'Descripción'"><?php echo $f['credito_descripcion'];?></td>
-								<td data-title="'Fecha de expedición'"></td>
+								<td data-title="'Fecha de solicitud'"></td>
 								<td data-title="'Ver más'"><button href="" onclick="loadDataModel(this);" class="TableLink" data-toggle="modal" data-target="#modalCredit" data-banco="<?php echo $f['banco'];?>">Ver más</button></td>
 							</tr>
 							<?php

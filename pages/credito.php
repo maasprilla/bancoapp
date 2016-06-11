@@ -133,12 +133,12 @@ include '../base_datos/conexion.php';
 				<br>
 				<label for="" class="Form-label">Garantía ofrecida</label>
 				<div class="form-group">
-					<label class="checkbox-inline"><input type="checkbox" name="" value="" required>Firma codeudor</label>
-					<label class="checkbox-inline"><input type="checkbox" name="" value="" required>Hipotecaria</label>
-					<label class="checkbox-inline"><input type="checkbox" name="" value="" required>Certificado fondo nacional de garantias</label>
+					<label class="radio-inline"><input type="radio" name="guarantee" value="codeudor" required>Firma codeudor</label>
+					<label class="radio-inline"><input type="radio" name="guarantee" value="hipotecario" required>Hipotecaria</label>
+					<label class="radio-inline"><input type="radio" name="guarantee" value="certificado" required>Certificado fondo nacional de garantias</label>
 				</div>
 				<div class="form-group">
-					<textarea class="form-control textarea FormDescriptionCredit-text" id="comments" name="comments" placeholder="Descripción" rows="3" required style="resize:none"></textarea>
+					<textarea class="form-control textarea FormDescriptionCredit-text" id="comments" name="comments" placeholder="Descripción" rows="3" style="resize:none"></textarea>
 				</div><br>
 				<label for="" class="Form-label">Ciudad</label>
 				<div class="form-group">
@@ -272,7 +272,7 @@ include '../base_datos/conexion.php';
 					</select>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="Duties" name="Duties" placeholder="Profesión, ocupación u oficio" >
+					<input type="text" class="form-control FormCredit-input" id="Duties" name="Duties" placeholder="Profesión, ocupación u oficio" required>
 				</div>
 				<label for="" class="Form-label">Actividad Económica</label>
 				<div class="form-group">
@@ -306,7 +306,7 @@ include '../base_datos/conexion.php';
 				</div>
 				<label for="" class="Form-label">Ciudad de empresa o negocio</label>
 				<div class="form-group">
-					<select type="text" class="form-control" id="city" name="city" placeholder="Ciudad de empresa o negocio" required>
+					<select type="text" class="form-control" id="city" name="city" placeholder="Ciudad de empresa o negocio">
 						<option value="" disabled selected>Ciudad de domicilio</option>
 						<?php
 								$ciudades=mysql_query("select * from ciudades order by nombre asc")or die(mysql_error());
@@ -320,7 +320,7 @@ include '../base_datos/conexion.php';
 				</div>
 				<label for="" class="Form-label">Departamento de empresa o negocio</label>
 				<div class="form-group">
-					<select type="text" class="form-control" id="dpto" name="dpto" placeholder="Departamento de empresa o negocio" required>
+					<select type="text" class="form-control" id="dpto" name="dpto" placeholder="Departamento de empresa o negocio">
 						<option value="" disabled selected>Departamento</option>
 						<?php
 								$departamento=mysql_query("select * from departamentos order by nombre asc")or die(mysql_error());
@@ -336,7 +336,7 @@ include '../base_datos/conexion.php';
 					<input type="text" class="form-control FormCredit-input" id="telorg" name="telorg" placeholder="Teléfono empresa o negocio" >
 				</div>
 				<div class="form-group">
-					<select type="text" class="form-control" id="economicactivity" name="economicactivity" placeholder="Actividad económica empresa o negocio" required>
+					<select type="text" class="form-control" id="economicactivity" name="economicactivity" placeholder="Actividad económica empresa o negocio">
 						<option value="" disabled selected>Actividad económica empresa o negocio</option>
 						<option>Sector privado</option>
 						<option>Sector público</option>
@@ -346,21 +346,21 @@ include '../base_datos/conexion.php';
 				</div>
 				<label for="" class="Form-label">Descripción Financiera</label>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="ingresosmen" name="ingresosmen" placeholder="Total ingresos mensuales $" >
+					<input type="number" class="form-control FormCredit-input" id="ingresosmen" name="ingresosmen" placeholder="Total ingresos mensuales $" required>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="egresosmen" name="egresosmen" placeholder="Total egresos mensuales $" >
+					<input type="number" class="form-control FormCredit-input" id="egresosmen" name="egresosmen" placeholder="Total egresos mensuales $" required>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="tact" name="tact" placeholder="Total activos (vehículos, inmuebles, maquinaria, etc)">
+					<input type="number" class="form-control FormCredit-input" id="tact" name="tact" placeholder="Total activos (vehículos, inmuebles, maquinaria, etc)" required>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="tpas" name="tpas" placeholder="Total pasivos (deudas financieras, otras deudas, etc)">
+					<input type="number" class="form-control FormCredit-input" id="tpas" name="tpas" placeholder="Total pasivos (deudas financieras, otras deudas, etc)" required>
 				</div><br>
 				<label for="" class="Form-label">Descripción Patrimonial</label><br><br>
 				<label for="" class="Form-label">Relación de terrenos y bienes raíces</label>
 				<div class="form-group">
-					<select type="text" class="form-control" id="tipoinmueble" name="tipoinmueble" placeholder="Tipo de inmueble" required>
+					<select type="text" class="form-control" id="tipoinmueble" name="tipoinmueble" placeholder="Tipo de inmueble">
 						<option value="" disabled selected>Tipo de inmueble</option>
 						<option>Casa</option>
 						<option>Apartamento</option>
@@ -372,10 +372,10 @@ include '../base_datos/conexion.php';
 					</select>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="dir" name="dir" placeholder="Dirección" >
+					<input type="text" class="form-control FormCredit-input" id="dir" name="dir" placeholder="Dirección">
 				</div>
 				<div class="form-group">
-					<select type="text" class="form-control" id="city" name="city" placeholder="Ciudad" required>
+					<select type="text" class="form-control" id="city" name="city" placeholder="Ciudad">
 						<option value="" disabled selected>Ciudad</option>
 						<?php
 								$ciudades=mysql_query("select * from ciudades order by nombre asc")or die(mysql_error());
@@ -388,7 +388,7 @@ include '../base_datos/conexion.php';
 					</select>
 				</div>
 				<div class="form-group">
-					<select type="text" class="form-control" id="dpto" name="dpto" placeholder="Departamento de empresa o negocio" required>
+					<select type="text" class="form-control" id="dpto" name="dpto" placeholder="Departamento">
 						<option value="" disabled selected>Departamento</option>
 						<?php
 								$departamento=mysql_query("select * from departamentos order by nombre asc")or die(mysql_error());
@@ -401,11 +401,11 @@ include '../base_datos/conexion.php';
 					</select>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="use" name="use" placeholder="Valor comercial" ><br>
+					<input type="text" class="form-control FormCredit-input" id="use" name="use" placeholder="Valor comercial"><br>
 				</div>
 				<label for="" class="Form-label">Relación maquinaria, equipo y bienes vehículo</label>
 				<div class="form-group">
-					<select type="text" class="form-control" id="veh" name="veh" placeholder="Clase" required>
+					<select type="text" class="form-control" id="veh" name="veh" placeholder="Clase">
 						<option value="" disabled selected>Tipo de inmueble</option>
 						<option>Maquinaria</option>
 						<option>Equipo</option>
@@ -437,16 +437,16 @@ include '../base_datos/conexion.php';
 				<label for="" class="Form-label">Referencias</label><br><br>
 				<label for="" class="Form-label">Referencia familiar</label>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="model" name="model" placeholder="Nombres y apellidos" >
+					<input type="text" class="form-control FormCredit-input" id="model" name="model" placeholder="Nombres y apellidos" required>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="brand" name="brand" placeholder="Parentesco">
+					<input type="text" class="form-control FormCredit-input" id="brand" name="brand" placeholder="Parentesco" required>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="brand" name="brand" placeholder="Teléfono">
+					<input type="tel" class="form-control FormCredit-input" id="brand" name="brand" placeholder="Teléfono" required>
 				</div>
 				<div class="form-group">
-					<input type="money" class="form-control FormCredit-input" id="age" name="age" placeholder="Dirección">
+					<input type="money" class="form-control FormCredit-input" id="age" name="age" placeholder="Dirección" required>
 				</div>
 				<label for="" class="Form-label">Ciudad</label>
 				<div class="form-group">
@@ -478,13 +478,13 @@ include '../base_datos/conexion.php';
 				</div><br>
 				<label for="" class="Form-label">Referencia personal</label>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="model" name="model" placeholder="Nombres y apellidos" >
+					<input type="text" class="form-control FormCredit-input" id="model" name="model" placeholder="Nombres y apellidos" required>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control FormCredit-input" id="brand" name="brand" placeholder="Teléfono">
+					<input type="tel" class="form-control FormCredit-input" id="brand" name="brand" placeholder="Teléfono" required>
 				</div>
 				<div class="form-group">
-					<input type="money" class="form-control FormCredit-input" id="age" name="age" placeholder="Dirección">
+					<input type="money" class="form-control FormCredit-input" id="age" name="age" placeholder="Dirección" required>
 				</div>
 				<label for="" class="Form-label">Ciudad</label>
 				<div class="form-group">
